@@ -43,10 +43,8 @@ def create_layers(article_text, sentence_base_annotations, sentence_events, sent
             if event:
                 # spanide mittekattuvuse korraL parandatakse sündmuse algus- ja lõpupositsioonid
                 if estnltk_startend[0] <= startend[0] <= estnltk_startend[1] or startend[0] <= estnltk_startend[0] <= startend[1]:
-                    #print(estnltk_word_id, "corpus_word:", word, startend, "EstNLTK_word:", estnltk_word.text, estnltk_startend)
                     startend = estnltk_startend
-                    #print(estnltk_word_id, "corpus_word:", article_text.text[startend[0]:startend[1]], startend, "EstNLTK_word:", estnltk_word.text, estnltk_startend)
-                    #print()
+                    
                 event_tag = event[0][0]
                 e_class = event[0][2].split()[1]
                 # kui on multiword
@@ -80,10 +78,8 @@ def create_layers(article_text, sentence_base_annotations, sentence_events, sent
             elif timex:
                 # spanide mittekattuvuse korral parandatakse ajaväljendi algus- ja lõpupositsioonid
                 if estnltk_startend[0] <= startend[0] <= estnltk_startend[1] or startend[0] <= estnltk_startend[0] <= startend[1]:
-                    #print(estnltk_word_id, "corpus_word:", word, startend, "EstNLTK_word:", estnltk_word.text, estnltk_startend)
                     startend = estnltk_startend
-                    #print(estnltk_word_id, "corpus_word:", article_text.text[startend[0]:startend[1]], startend, "EstNLTK_word:", estnltk_word.text, estnltk_startend)
-                    #print()
+                    
                 token_start = startend[0]
                 token_end = startend[1]
                 for i in range(len(timex)):
@@ -141,6 +137,45 @@ def create_gold_word_events_layer(article_text, sentence_base_annotations):
             gold_word_events.add_annotation([word.base_span], nertag="O")
             
     return gold_word_events
+
+
+# -- method for creating layer of gold event phrases
+def create_gold_event_phrases(article_text):
+    gold_event_phrases = estnltk.Layer(name='gold_event_phrases',
+                  text_object=article_text,
+                  attributes=['event_ID', 'expression', 'event_class'],
+                  enveloping='words',
+                  ambiguous=True)
+    event_groups = article_text.gold_events.groupby(['event_ID'], return_type='spans')
+    
+    for key, value in event_groups:
+        phrase_spans = []
+        for span in value:
+            phrase_spans.append(span)
+        gold_event_phrases.add_annotation([s.base_span for s in phrase_spans], event_ID=key[0], 
+                                     expression=phrase_spans[0]['expression'], event_class=phrase_spans[0]['event_class'])
+    
+    return gold_event_phrases
+
+
+# -- method for creating layer of gold timex phrases
+def create_gold_timex_phrases(article_text):
+    gold_timex_phrases = estnltk.Layer(name='gold_timex_phrases',
+                  text_object=article_text,
+                  attributes=['timex_ID', 'expression', 'type', 'value'],
+                  enveloping='words',
+                  ambiguous=True)
+    timex_groups = article_text.gold_timexes.groupby(['timex_ID'], return_type='spans')
+    
+    for key, value in timex_groups:
+        phrase_spans = []
+        for span in value:
+            phrase_spans.append(span)
+        gold_timex_phrases.add_annotation([s.base_span for s in phrase_spans], timex_ID=key[0], 
+                                     expression=phrase_spans[0]['expression'][0], type=phrase_spans[0]['type'][0], 
+                                          value=phrase_spans[0]['value'][0])
+    
+    return gold_timex_phrases
 
 
 # -- method for creating EstNLTK Text object from article text, returns Text object and corpus word mapping
