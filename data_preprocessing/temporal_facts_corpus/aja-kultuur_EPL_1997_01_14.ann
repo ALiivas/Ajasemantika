@@ -1,0 +1,9 @@
+T1	Timex 575 590	mullu novembris
+A1	type T1 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='mullu novembris' tid='t1' type='DATE' value='1996-11' temporal_function=True>
+T2	Event 564 568	läks
+A2	duration T2 minutes
+A3	duration_confidence T2 neutral
+A4	class_confidence T2 high
+A5	class T2 OCCURRENCE
+R1	Tlink_INCLUDES Arg1:T1 Arg2:T2	

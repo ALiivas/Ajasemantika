@@ -1,0 +1,150 @@
+T1	Timex 515 532	kahe aasta pärast
+T2	Timex 1515 1522	märtsis
+T3	Timex 1777 1781	9.9.
+T4	Timex 2009 2024	kolmelt aastalt
+T5	Timex 2025 2032	neljale
+T6	Timex 2080 2091	kaks aastat
+T7	Timex 2241 2252	kaheaastase
+T8	Timex 2610 2621	pool aastat
+T9	Timex 2642 2653	pool aastat
+T10	Timex 2893 2905	17. oktoobri
+T11	Timex 3434 3446	kahe aastaga
+T12	Timex 3683 3689	praegu
+T13	Timex 3701 3713	aasta pärast
+T14	Timex 3744 3766	2001. aasta septembris
+A1	type T1 DATE
+A2	type T2 DATE
+A3	type T3 DATE
+A4	type T4 DURATION
+A5	type T5 DURATION
+A6	type T6 DURATION
+A7	type T7 DURATION
+A8	type T8 DURATION
+A9	type T9 DURATION
+A10	type T10 DATE
+A11	type T11 DURATION
+A12	type T12 DATE
+A13	type T13 DATE
+A14	type T14 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='kahe aasta pärast' tid='t1' type='DATE' value='2001' temporal_function=True>
+#2	AnnotatorNotes T2	Original: <TIMEX text='märtsis' tid='t2' type='DATE' value='1999-03' temporal_function=True>
+#3	AnnotatorNotes T3	Original: <TIMEX text='9.9.' tid='t1_3' type='DATE' value='1999-09-09' temporal_function=True>
+#4	AnnotatorNotes T4	Original: <TIMEX text='kolmelt aastalt' tid='t1_4' type='DURATION' value='P3Y' temporal_function=False>
+#5	AnnotatorNotes T5	Original: <TIMEX text='neljale' tid='t1_5' type='DURATION' value='P4Y' temporal_function=False>
+#6	AnnotatorNotes T6	Original: <TIMEX text='kaks aastat' tid='t3' type='DURATION' value='P2Y' temporal_function=False>
+#7	AnnotatorNotes T7	Original: <TIMEX text='kaheaastase' tid='t4' type='DURATION' value='P2Y' temporal_function=False>
+#8	AnnotatorNotes T8	Original: <TIMEX text='pool aastat' tid='t6' type='DURATION' value='P6M' temporal_function=True>
+#9	AnnotatorNotes T9	Original: <TIMEX text='pool aastat' tid='t385' type='DURATION' value='P6M' temporal_function=True>
+#10	AnnotatorNotes T10	Original: <TIMEX text='17. oktoobri' tid='t7' type='DATE' value='1999-10-17' temporal_function=True>
+#11	AnnotatorNotes T11	Original: <TIMEX text='kahe aastaga' tid='t8' type='DURATION' value='P2Y' temporal_function=False>
+#12	AnnotatorNotes T12	Original: <TIMEX text='praegu' tid='t9' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#13	AnnotatorNotes T13	Original: <TIMEX text='aasta pärast' tid='t10' type='DATE' value='2000' temporal_function=True>
+#14	AnnotatorNotes T14	Original: <TIMEX text='2001. aasta septembris' tid='t11' type='DATE' value='2001-09' temporal_function=False>
+T15	Event 545 550	saada
+A15	duration T15 minutes
+A16	duration_confidence T15 neutral
+A17	class_confidence T15 high
+A18	class T15 MODAL
+T16	Event 1445 1452	osavõtt
+A19	duration T16 minutes
+A20	duration_confidence T16 neutral
+A21	class_confidence T16 high
+A22	class T16 I_ACTION
+T17	Event 1467 1478	valimistest
+A23	duration T17 days
+A24	duration_confidence T17 high
+A25	class_confidence T17 high
+A26	class T17 OCCURRENCE
+R2	Tlink_INCLUDES Arg1:T2 Arg2:T16	
+T18	Event 1720 1725	arvas
+A27	duration T18 minutes
+A28	duration_confidence T18 neutral
+A29	class_confidence T18 high
+A30	class T18 OCCURRENCE
+R3	Tlink_INCLUDES Arg1:T3 Arg2:T18	
+T19	Event 1991 2006	valimisperioodi
+A31	duration T19 years
+A32	duration_confidence T19 high
+A33	class_confidence T19 high
+A34	class T19 OCCURRENCE
+R4	Tlink_SIMULTANEOUS Arg1:T4 Arg2:T19	
+R5	Tlink_SIMULTANEOUS Arg1:T5 Arg2:T19	
+T20	Event 2060 2069	valimised
+A35	duration T20 days
+A36	duration_confidence T20 neutral
+A37	class_confidence T20 high
+A38	class T20 OCCURRENCE
+T21	Event 2253 2256	töö
+A39	duration T21 years
+A40	duration_confidence T21 high
+A41	class_confidence T21 high
+A42	class T21 OCCURRENCE
+R6	Tlink_SIMULTANEOUS Arg1:T7 Arg2:T21	
+T22	Event 2600 2609	valimised
+A43	duration T22 days
+A44	duration_confidence T22 neutral
+A45	class_confidence T22 high
+A46	class T22 OCCURRENCE
+R7	Tlink_BEFORE Arg1:T8 Arg2:T22	
+R8	Tlink_AFTER Arg1:T9 Arg2:T22	
+T23	Event 2906 2914	valimisi
+A47	duration T23 hours
+A48	duration_confidence T23 high
+A49	class_confidence T23 high
+A50	class T23 OCCURRENCE
+R9	Tlink_INCLUDES Arg1:T10 Arg2:T23	
+T24	Event 3427 3433	muutub
+A51	duration T24 years
+A52	duration_confidence T24 high
+A53	class_confidence T24 high
+A54	class T24 OCCURRENCE
+R10	Tlink_SIMULTANEOUS Arg1:T11 Arg2:T24	
+T25	Event 3651 3660	Alustades
+A55	duration T25 minutes
+A56	duration_confidence T25 neutral
+A57	class_confidence T25 high
+A58	class T25 ASPECTUAL
+T26	Event 3671 3682	protseduure
+A59	duration T26 months
+A60	duration_confidence T26 neutral
+A61	class_confidence T26 high
+A62	class T26 OCCURRENCE
+T27	Event 3724 3738	rahvahääletuse
+A63	duration T27 days
+A64	duration_confidence T27 neutral
+A65	class_confidence T27 high
+A66	class T27 OCCURRENCE
+R11	Tlink_SIMULTANEOUS Arg1:T12 Arg2:T25	
+R12	Tlink_INCLUDES Arg1:T13 Arg2:T27	
+T28	Event 3767 3773	valida
+A67	duration T28 days
+A68	duration_confidence T28 neutral
+A69	class_confidence T28 high
+A70	class T28 OCCURRENCE
+R13	Tlink_INCLUDES Arg1:T14 Arg2:T28	
+T30	Event 533 544	rahva isaks
+A75	duration T30 years
+A76	duration_confidence T30 high
+A77	class_confidence T30 high
+A78	class T30 STATE
+R1	has_Argument Arg1:T15 Arg2:T30	
+R14	Tlink_SIMULTANEOUS Arg1:T1 Arg2:T15	
+R15	has_Argument Arg1:T16 Arg2:T17	
+R16	Tlink_BEFORE Arg1:T6 Arg2:T20	
+R17	Tlink_AFTER Arg1:T6 Arg2:T20	
+R18	has_Argument Arg1:T25 Arg2:T26	
+T29	Event 2659 2677	parlamendivalimisi
+A71	duration T29 days
+A72	duration_confidence T29 neutral
+A73	class_confidence T29 high
+A74	class T29 OCCURRENCE
+R19	Tlink_BEFORE Arg1:T9 Arg2:T29	
+R20	Tlink_AFTER Arg1:T8 Arg2:T29	
+R21	Tlink_IS_INCLUDED Arg1:T12 Arg2:T26	
+T31	Event 2104 2122	Riigikogu valimisi
+A79	duration T31 days
+A80	duration_confidence T31 neutral
+A81	class_confidence T31 high
+A82	class T31 OCCURRENCE
+R22	Tlink_BEFORE Arg1:T6 Arg2:T31	
+R23	Tlink_AFTER Arg1:T6 Arg2:T31	

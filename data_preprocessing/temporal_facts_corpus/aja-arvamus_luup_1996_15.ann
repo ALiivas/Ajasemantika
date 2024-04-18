@@ -1,0 +1,90 @@
+T1	Timex 1048 1066	mõnd mõnusat õhtut
+T2	Timex 1073 1087	kaheks aastaks
+T3	Timex 1155 1175	sügavate öötundideni
+T4	Timex 1208 1227	1970. aastate lõpus
+T5	Timex 1928 1934	aastad
+T6	Timex 1972 1984	Igal aaastal
+T7	Timex 2645 2649	Seni
+T8	Timex 2654 2660	aastad
+T9	Timex 3632 3643	ühepäevaste
+T10	Timex 3646 3655	nädalaste
+T11	Timex 5268 5277	kaasajale
+A1	type T1 TIME
+A2	type T2 DURATION
+A3	type T3 TIME
+A4	type T4 DATE
+A5	type T5 DURATION
+A6	type T6 SET
+A7	type T7 DATE
+A8	type T8 DURATION
+A9	type T9 DURATION
+A10	type T10 DURATION
+A11	type T11 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='mõnd mõnusat õhtut' tid='t1_28' type='TIME' value='TEV' temporal_function=True comment='tuua välja korduvus - tegemist on mitme õhtuga'>
+#2	AnnotatorNotes T2	Original: <TIMEX text='kaheks aastaks' tid='t2' type='DURATION' value='P2Y' temporal_function=False>
+#3	AnnotatorNotes T3	Original: <TIMEX text='sügavate öötundideni' tid='t1_1' type='TIME' value='TNI' temporal_function=True>
+#4	AnnotatorNotes T4	Original: <TIMEX text='1970. aastate lõpus' tid='t3' type='DATE' value='197' temporal_function=False mod='END'>
+#5	AnnotatorNotes T5	Original: <TIMEX text='aastad' tid='t4' type='DURATION' value='PXY' temporal_function=True>
+#6	AnnotatorNotes T6	Original: <TIMEX text='Igal aaastal' tid='t5' type='SET' value='P1Y' temporal_function=True quant='EVERY'>
+#7	AnnotatorNotes T7	Original: <TIMEX text='Seni' tid='t1_6' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0' mod='ON_OR_BEFORE'>
+#8	AnnotatorNotes T8	Original: <TIMEX text='aastad' tid='t6' type='DURATION' value='PXY' temporal_function=True>
+#9	AnnotatorNotes T9	Original: <TIMEX text='ühepäevaste' tid='t7' type='DURATION' value='P1D' temporal_function=False>
+#10	AnnotatorNotes T10	Original: <TIMEX text='nädalaste' tid='t1_4' type='DURATION' value='P1W' temporal_function=False>
+#11	AnnotatorNotes T11	Original: <TIMEX text='kaasajale' tid='t1_5' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+T12	Event 1201 1207	toimus
+A12	duration T12 hours
+A13	duration_confidence T12 high
+A14	class_confidence T12 high
+A15	class T12 OCCURRENCE
+R1	Tlink_INCLUDES Arg1:T4 Arg2:T12	
+T13	Event 1117 1125	sattunud
+A16	duration T13 years
+A17	duration_confidence T13 high
+A18	class_confidence T13 high
+A19	class T13 OCCURRENCE
+R2	Tlink_SIMULTANEOUS Arg1:T2 Arg2:T13	
+T14	Event 1145 1154	arutasime
+A20	duration T14 hours
+A21	duration_confidence T14 high
+A22	class_confidence T14 high
+A23	class T14 I_ACTION
+T15	Event 1176 1193	tulevikuprobleeme
+A24	duration T15 years
+A25	duration_confidence T15 high
+A26	class_confidence T15 high
+A27	class T15 OCCURRENCE
+R3	Tlink_SIMULTANEOUS Arg1:T3 Arg2:T14	
+R4	Tlink_INCLUDES Arg1:T1 Arg2:T14	
+T16	Event 3671 3684	täiendõppuste
+A28	duration T16 days
+A29	duration_confidence T16 high
+A30	class_confidence T16 high
+A31	class T16 OCCURRENCE
+R5	Tlink_SIMULTANEOUS Arg1:T9 Arg2:T16	
+R6	Tlink_SIMULTANEOUS Arg1:T10 Arg2:T16	
+T17	Event 1919 1927	mööduvad
+A32	duration T17 years
+A33	duration_confidence T17 high
+A34	class_confidence T17 high
+A35	class T17 OCCURRENCE
+R7	Tlink_SIMULTANEOUS Arg1:T5 Arg2:T17	
+T18	Event 1985 1991	ületab
+A36	duration T18 instant
+A37	duration_confidence T18 high
+A38	class_confidence T18 neutral
+A39	class T18 OCCURRENCE
+R8	Tlink_INCLUDES Arg1:T6 Arg2:T18	
+T19	Event 2661 2668	lähevad
+A40	duration T19 years
+A41	duration_confidence T19 high
+A42	class_confidence T19 high
+A43	class T19 OCCURRENCE
+R9	Tlink_SIMULTANEOUS Arg1:T7 Arg2:T19	
+R10	Tlink_SIMULTANEOUS Arg1:T8 Arg2:T19	
+R11	has_Argument Arg1:T14 Arg2:T15	
+T20	Event 5288 5293	raami
+A44	duration T20 years
+A45	duration_confidence T20 neutral
+A46	class_confidence T20 high
+A47	class T20 STATE
+R12	Tlink_SIMULTANEOUS Arg1:T11 Arg2:T20	

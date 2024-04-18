@@ -1,0 +1,89 @@
+T1	Timex 10 21	1. oktoober
+T2	Timex 261 277	eelmisel nädalal
+T3	Timex 391 401	49 aastaks
+T4	Timex 669 687	järgmiseks aastaks
+T5	Timex 802 809	aastaks
+T6	Timex 851 868	poolteiseks kuuks
+T7	Timex 913 931	esimestel aastatel
+T8	Timex 1202 1213	veebruarist
+T9	Timex 1383 1399	sellest nädalast
+A1	type T1 DATE
+A2	type T2 DATE
+A3	type T3 DURATION
+A4	type T4 DATE
+A5	type T5 DURATION
+A6	type T6 DURATION
+A7	type T7 DURATION
+A8	type T8 DATE
+A9	type T9 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='1. oktoober' tid='t1' type='DATE' value='2004-10-01' temporal_function=True>
+#2	AnnotatorNotes T2	Original: <TIMEX text='eelmisel nädalal' tid='t2' type='DATE' value='2004-W39' temporal_function=True>
+#3	AnnotatorNotes T3	Original: <TIMEX text='49 aastaks' tid='t3' type='DURATION' value='P49Y' temporal_function=False>
+#4	AnnotatorNotes T4	Original: <TIMEX text='järgmiseks aastaks' tid='t4' type='DATE' value='2005' temporal_function=True>
+#5	AnnotatorNotes T5	Original: <TIMEX text='aastaks' tid='t1_1' type='DURATION' value='P1Y' temporal_function=False>
+#6	AnnotatorNotes T6	Original: <TIMEX text='poolteiseks kuuks' tid='t5' type='DURATION' value='P1M15D' temporal_function=True mod='APPROX'>
+#7	AnnotatorNotes T7	Original: <TIMEX text='esimestel aastatel' tid='t6' type='DURATION' value='PXY' temporal_function=True>
+#8	AnnotatorNotes T8	Original: <TIMEX text='veebruarist' tid='t7' type='DATE' value='2004-02' temporal_function=True>
+#9	AnnotatorNotes T9	Original: <TIMEX text='sellest nädalast' tid='t8' type='DATE' value='2004-W40' temporal_function=True>
+T10	Event 255 260	ostis
+A10	duration T10 minutes
+A11	duration_confidence T10 neutral
+A12	class_confidence T10 high
+A13	class T10 OCCURRENCE
+R1	Tlink_INCLUDES Arg1:T2 Arg2:T10	
+T11	Event 402 415	kasutusõiguse
+A14	duration T11 years
+A15	duration_confidence T11 high
+A16	class_confidence T11 neutral
+A17	class T11 STATE
+R2	Tlink_SIMULTANEOUS Arg1:T3 Arg2:T11	
+T12	Event 1149 1163	Läbirääkimised
+A18	duration T12 months
+A19	duration_confidence T12 high
+A20	class_confidence T12 high
+A21	class T12 OCCURRENCE
+R3	Tlink_IS_INCLUDED Arg1:T8 Arg2:T12	
+T13	Event 755 762	jätkuks
+A22	duration T13 months
+A23	duration_confidence T13 high
+A24	class_confidence T13 neutral
+A25	class T13 STATE
+R4	Tlink_SIMULTANEOUS Arg1:T5 Arg2:T13	
+R5	Tlink_SIMULTANEOUS Arg1:T6 Arg2:T13	
+T14	Event 904 909	julge
+A26	duration T14 years
+A27	duration_confidence T14 high
+A28	class_confidence T14 high
+A29	class T14 I_STATE
+T15	Event 951 961	planeerida
+A30	duration T15 years
+A31	duration_confidence T15 high
+A32	class_confidence T15 high
+A33	class T15 I_ACTION
+R6	has_Argument Arg1:T14 Arg2:T15	
+R7	Tlink_SIMULTANEOUS Arg1:T7 Arg2:T14	
+T16	Event 1371 1375	asus
+A34	duration T16 minutes
+A35	duration_confidence T16 low
+A36	class_confidence T16 high
+A37	class T16 ASPECTUAL
+T17	Event 1422 1427	tööle
+A38	duration T17 years
+A39	duration_confidence T17 neutral
+A40	class_confidence T17 neutral
+A41	class T17 STATE
+R8	has_Argument Arg1:T16 Arg2:T17	
+R9	Tlink_INCLUDES Arg1:T9 Arg2:T16	
+R10	Tlink_IS_INCLUDED Arg1:T9 Arg2:T17	
+T18	Event 688 696	raieload
+A42	duration T18 months
+A43	duration_confidence T18 high
+A44	class_confidence T18 high
+A45	class T18 STATE
+R11	Tlink_SIMULTANEOUS Arg1:T4 Arg2:T18	
+T19	Event 221 229	kirjutab
+A46	duration T19 minutes
+A47	duration_confidence T19 neutral
+A48	class_confidence T19 high
+A49	class T19 OCCURRENCE
+R12	Tlink_INCLUDES Arg1:T1 Arg2:T19	

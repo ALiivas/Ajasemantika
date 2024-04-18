@@ -1,0 +1,27 @@
+T1	Timex 321 336	Môni aeg tagasi
+T2	Timex 602 606	ammu
+T3	Timex 669 677	praegust
+A1	type T1 DATE
+A2	type T2 DATE
+A3	type T3 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='Môni aeg tagasi' tid='t1_1' type='DATE' value='PAST_REF' temporal_function=True anchor_time_id='t0'>
+#2	AnnotatorNotes T2	Original: <TIMEX text='ammu' tid='t1_2' type='DATE' value='PAST_REF' temporal_function=True anchor_time_id='t0' comment="vaieldav, kas mõeldakse 'on ammusest teada'">
+#3	AnnotatorNotes T3	Original: <TIMEX text='praegust' tid='t1' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+T4	Event 354 362	kutsutud
+A4	duration T4 weeks
+A5	duration_confidence T4 neutral
+A6	class_confidence T4 neutral
+A7	class T4 STATE
+R1	Tlink_SIMULTANEOUS Arg1:T1 Arg2:T4	
+T5	Event 607 612	teada
+A8	duration T5 years
+A9	duration_confidence T5 neutral
+A10	class_confidence T5 high
+A11	class T5 STATE
+R2	Tlink_IS_INCLUDED Arg1:T2 Arg2:T5	
+T6	Event 678 693	gaasi-partnerit
+A12	duration T6 years
+A13	duration_confidence T6 neutral
+A14	class_confidence T6 high
+A15	class T6 STATE
+R3	Tlink_IS_INCLUDED Arg1:T3 Arg2:T6	

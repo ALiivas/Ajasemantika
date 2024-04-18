@@ -1,0 +1,34 @@
+T1	Timex 70 85	nädalavahetusel
+T2	Timex 194 213	eeloleval laupäeval
+T3	Timex 235 245	pühapäeval
+A1	type T1 DATE
+A2	type T2 DATE
+A3	type T3 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='nädalavahetusel' tid='t1' type='DATE' value='1996-W39-WE' temporal_function=True>
+#2	AnnotatorNotes T2	Original: <TIMEX text='eeloleval laupäeval' tid='t2' type='DATE' value='1996-10-05' temporal_function=True>
+#3	AnnotatorNotes T3	Original: <TIMEX text='pühapäeval' tid='t3' type='DATE' value='1996-10-06' temporal_function=True>
+T4	Event 64 69	peeti
+A4	duration T4 hours
+A5	duration_confidence T4 high
+A6	class_confidence T4 high
+A7	class T4 I_ACTION
+R1	Tlink_INCLUDES Arg1:T1 Arg2:T4	
+T5	Event 185 193	peetakse
+A8	duration T5 hours
+A9	duration_confidence T5 high
+A10	class_confidence T5 high
+A11	class T5 I_ACTION
+R2	Tlink_INCLUDES Arg1:T2 Arg2:T5	
+R3	Tlink_INCLUDES Arg1:T3 Arg2:T5	
+T6	Event 58 63	etapp
+A12	duration T6 hours
+A13	duration_confidence T6 high
+A14	class_confidence T6 high
+A15	class T6 OCCURRENCE
+T7	Event 179 184	etapp
+A16	duration T7 hours
+A17	duration_confidence T7 high
+A18	class_confidence T7 high
+A19	class T7 OCCURRENCE
+R4	has_Argument Arg1:T5 Arg2:T7	
+R5	has_Argument Arg1:T4 Arg2:T6	

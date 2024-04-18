@@ -1,0 +1,93 @@
+T1	Timex 95 99	Nüüd
+T2	Timex 427 431	nüüd
+T3	Timex 731 739	praegugi
+T4	Timex 932 945	1987. aastast
+T5	Timex 1792 1803	1987. aasta
+T6	Timex 2485 2489	nüüd
+T7	Timex 3093 3101	praeguse
+T8	Timex 3223 3235	lähimineviku
+T9	Timex 3326 3342	kogu lähiminevik
+T10	Timex 3389 3401	lähimineviku
+T11	Timex 3533 3545	kuueks kuuks
+T12	Timex 3890 3903	nüüdisaegsete
+T13	Timex 4162 4170	70-ndate
+A1	type T1 DATE
+A2	type T2 DATE
+A3	type T3 DATE
+A4	type T4 DATE
+A5	type T5 DATE
+A6	type T6 DATE
+A7	type T7 DATE
+A8	type T8 DATE
+A9	type T9 DATE
+A10	type T10 DATE
+A11	type T11 DURATION
+A12	type T12 DATE
+A13	type T13 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='Nüüd' tid='t1' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#2	AnnotatorNotes T2	Original: <TIMEX text='nüüd' tid='t2' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#3	AnnotatorNotes T3	Original: <TIMEX text='praegugi' tid='t3' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#4	AnnotatorNotes T4	Original: <TIMEX text='1987. aastast' tid='t4' type='DATE' value='1987' temporal_function=False>
+#5	AnnotatorNotes T5	Original: <TIMEX text='1987. aasta' tid='t5' type='DATE' value='1987' temporal_function=False>
+#6	AnnotatorNotes T6	Original: <TIMEX text='nüüd' tid='t6' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#7	AnnotatorNotes T7	Original: <TIMEX text='praeguse' tid='t7' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#8	AnnotatorNotes T8	Original: <TIMEX text='lähimineviku' tid='t1_1' type='DATE' value='PAST_REF' temporal_function=True anchor_time_id='t0'>
+#9	AnnotatorNotes T9	Original: <TIMEX text='kogu lähiminevik' tid='t1_2' type='DATE' value='PAST_REF' temporal_function=True anchor_time_id='t0'>
+#10	AnnotatorNotes T10	Original: <TIMEX text='lähimineviku' tid='t1_3' type='DATE' value='PAST_REF' temporal_function=True anchor_time_id='t0'>
+#11	AnnotatorNotes T11	Original: <TIMEX text='kuueks kuuks' tid='t8' type='DURATION' value='P6M' temporal_function=False>
+#12	AnnotatorNotes T12	Original: <TIMEX text='nüüdisaegsete' tid='t9' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#13	AnnotatorNotes T13	Original: <TIMEX text='70-ndate' tid='t10' type='DATE' value='197' temporal_function=True>
+T14	Event 141 148	kadunud
+A14	duration T14 years
+A15	duration_confidence T14 neutral
+A16	class_confidence T14 neutral
+A17	class T14 STATE
+R1	Tlink_IS_INCLUDED Arg1:T1 Arg2:T14	
+T15	Event 419 421	on
+A18	duration T15 years
+A19	duration_confidence T15 neutral
+A20	class_confidence T15 high
+A21	class T15 STATE
+R2	Tlink_IS_INCLUDED Arg1:T2 Arg2:T15	
+T16	Event 700 708	sobiksid
+A22	duration T16 years
+A23	duration_confidence T16 low
+A24	class_confidence T16 high
+A25	class T16 STATE
+R3	Tlink_IS_INCLUDED Arg1:T3 Arg2:T16	
+T17	Event 3558 3565	võtmist
+A26	duration T17 months
+A27	duration_confidence T17 high
+A28	class_confidence T17 high
+A29	class T17 OCCURRENCE
+R4	Tlink_SIMULTANEOUS Arg1:T11 Arg2:T17	
+T18	Entity 4178 4190	seinamaaling
+R5	Tlink_INCLUDES Arg1:T13 Arg2:T18	
+T19	Entity 3236 3244	taieseid
+R6	Tlink_INCLUDES Arg1:T8 Arg2:T19	
+T20	Entity 3402 3417	kunstiväärtuste
+R7	Tlink_INCLUDES Arg1:T10 Arg2:T20	
+T21	Event 2494 2499	antud
+A30	duration T21 minutes
+A31	duration_confidence T21 neutral
+A32	class_confidence T21 high
+A33	class T21 OCCURRENCE
+R8	Tlink_AFTER Arg1:T6 Arg2:T21	
+T22	Event 3102 3109	seisuga
+A34	duration T22 days
+A35	duration_confidence T22 neutral
+A36	class_confidence T22 high
+A37	class T22 STATE
+R9	Tlink_IS_INCLUDED Arg1:T7 Arg2:T22	
+T23	Entity 3904 3919	kunstiväärtuste
+R10	Tlink_INCLUDES Arg1:T12 Arg2:T23	
+T24	Event 3323 3325	on
+A38	duration T24 years
+A39	duration_confidence T24 high
+A40	class_confidence T24 high
+A41	class T24 STATE
+R11	Tlink_BEFORE Arg1:T9 Arg2:T24	
+T25	Entity 1804 1812	lepingus
+R12	Tlink_INCLUDES Arg1:T5 Arg2:T25	
+T26	Entity 923 931	lepingus
+R13	Tlink_INCLUDES Arg1:T4 Arg2:T26	

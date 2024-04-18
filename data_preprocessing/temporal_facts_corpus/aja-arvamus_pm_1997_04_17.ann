@@ -1,0 +1,34 @@
+T1	Timex 194 205	esmaspäeval
+T2	Timex 274 280	hiljem
+T3	Timex 566 580	kaheks päevaks
+A1	type T1 DATE
+A2	type T2 DATE
+A3	type T3 DURATION
+#1	AnnotatorNotes T1	Original: <TIMEX text='esmaspäeval' tid='t1' type='DATE' value='1997-04-14' temporal_function=True>
+#2	AnnotatorNotes T2	Original: <TIMEX text='hiljem' tid='t1_7' type='DATE' value='FUTURE_REF' temporal_function=True anchor_time_id='t1'>
+#3	AnnotatorNotes T3	Original: <TIMEX text='kaheks päevaks' tid='t2' type='DURATION' value='P2D' temporal_function=False>
+T4	Event 182 187	saame
+A4	duration T4 minutes
+A5	duration_confidence T4 neutral
+A6	class_confidence T4 high
+A7	class T4 OCCURRENCE
+R1	Tlink_INCLUDES Arg1:T1 Arg2:T4	
+T5	Event 263 273	Helistasin
+A8	duration T5 minutes
+A9	duration_confidence T5 neutral
+A10	class_confidence T5 high
+A11	class T5 OCCURRENCE
+R2	Tlink_INCLUDES Arg1:T2 Arg2:T5	
+T6	Event 549 555	võtsin
+A12	duration T6 minutes
+A13	duration_confidence T6 neutral
+A14	class_confidence T6 high
+A15	class T6 I_ACTION
+T7	Event 581 587	vabaks
+A16	duration T7 days
+A17	duration_confidence T7 high
+A18	class_confidence T7 high
+A19	class T7 STATE
+R3	has_Argument Arg1:T6 Arg2:T7	
+R4	Tlink_AFTER Arg1:T3 Arg2:T6	
+R5	Tlink_SIMULTANEOUS Arg1:T3 Arg2:T7	

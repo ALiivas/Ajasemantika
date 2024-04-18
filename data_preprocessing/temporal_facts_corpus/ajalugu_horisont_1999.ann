@@ -1,0 +1,313 @@
+T1	Timex 208 221	1994. aastast
+T2	Timex 1169 1192	umbes 9700 aastat e.Kr.
+T3	Timex 1478 1484	hiljem
+T4	Timex 1554 1562	praegugi
+T5	Timex 1853 1876	ca 8800. aastasse e.Kr.
+T6	Timex 1945 1969	mitu tuhat aastat hiljem
+T7	Timex 2020 2025	9000-
+T8	Timex 2025 2042	5000 aastat e.Kr.
+T9	Timex 2057 2070	Sellest ajast
+T10	Timex 2502 2513	kevadtalvel
+T11	Timex 2590 2596	tänini
+T12	Timex 2616 2626	veebruaris
+T13	Timex 2630 2637	märtsis
+T14	Timex 2668 2679	sellel ajal
+T15	Timex 2741 2761	maksimaalselt nädala
+T16	Timex 2840 2848	u. 4700-
+T17	Timex 2848 2865	4000 aastat e.Kr.
+T18	Timex 3505 3515	praegusest
+T19	Timex 3640 3645	5000-
+T20	Timex 3645 3662	1800 aastat e.Kr.
+T21	Timex 3778 3794	Paari aasta eest
+T22	Timex 3940 3951	umbes 5700-
+T23	Timex 3951 3968	5000 aastat e.Kr.
+T24	Timex 3969 3986	1997. aasta suvel
+T25	Timex 4076 4087	umbes 6000-
+T26	Timex 4087 4104	5000 aastat e.Kr.
+T27	Timex 4352 4359	samasse
+T28	Timex 4381 4397	hilisemasse aega
+T29	Timex 4537 4542	varem
+T30	Timex 6084 6097	aastaringselt
+T31	Timex 6331 6343	kevadtalvise
+T32	Timex 6362 6367	suvel
+T33	Timex 6371 6378	sügisel
+T34	Timex 6411 6419	u. 3000-
+T35	Timex 6419 6436	2000 aastat e.Kr.
+T36	Timex 6489 6499	samaaegsed
+T37	Timex 6647 6657	praeguseks
+T38	Timex 6824 6836	märksa varem
+T39	Timex 6955 6978	umbes 5000 aastat e.Kr.
+T40	Timex 7311 7319	praeguse
+T41	Timex 7351 7355	Seni
+A1	type T1 DATE
+A2	type T2 DATE
+A3	type T3 DATE
+A4	type T4 DATE
+A5	type T5 DATE
+A6	type T6 DATE
+A7	type T7 DATE
+A8	type T8 DATE
+A9	type T9 DURATION
+A10	type T10 DATE
+A11	type T11 DATE
+A12	type T12 DATE
+A13	type T13 DATE
+A14	type T14 DURATION
+A15	type T15 DURATION
+A16	type T16 DATE
+A17	type T17 DATE
+A18	type T18 DATE
+A19	type T19 DATE
+A20	type T20 DATE
+A21	type T21 DATE
+A22	type T22 DATE
+A23	type T23 DATE
+A24	type T24 DATE
+A25	type T25 DATE
+A26	type T26 DATE
+A27	type T27 DATE
+A28	type T28 DATE
+A29	type T29 DATE
+A30	type T30 SET
+A31	type T31 DATE
+A32	type T32 DATE
+A33	type T33 DATE
+A34	type T34 DATE
+A35	type T35 DATE
+A36	type T36 DURATION
+A37	type T37 DATE
+A38	type T38 DATE
+A39	type T39 DATE
+A40	type T40 DATE
+A41	type T41 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='1994. aastast' tid='t1' type='DATE' value='1994' temporal_function=False>
+#2	AnnotatorNotes T2	Original: <TIMEX text='umbes 9700 aastat e.Kr.' tid='t2' type='DATE' value='BC9700' temporal_function=True mod='APPROX'>
+#3	AnnotatorNotes T3	Original: <TIMEX text='hiljem' tid='t1_14' type='DATE' value='FUTURE_REF' temporal_function=True anchor_time_id='t2'>
+#4	AnnotatorNotes T4	Original: <TIMEX text='praegugi' tid='t3' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#5	AnnotatorNotes T5	Original: <TIMEX text='ca 8800. aastasse e.Kr.' tid='t1_1' type='DATE' value='BC8800' temporal_function=True mod='APPROX'>
+#6	AnnotatorNotes T6	Original: <TIMEX text='mitu tuhat aastat hiljem' tid='t4' type='DATE' temporal_function=True anchor_time_id='t1_3' comment='viide tekstis järgnevale ajaväljendile, semantika problemaatiline'>
+#7	AnnotatorNotes T7	Original: <TIMEX text='9000-' tid='t1_2' type='DATE' value='BC9000' temporal_function=False part_of_interval={'tid': 't1_3', 'type': 'DURATION', 'value': 'PXXXXY', 'temporal_function': True, 'begin_point': 't1_2', 'end_point': 't5'}>
+#8	AnnotatorNotes T8	Original: <TIMEX text='5000 aastat e.Kr.' tid='t5' type='DATE' value='BC5000' temporal_function=False part_of_interval={'tid': 't1_3', 'type': 'DURATION', 'value': 'PXXXXY', 'temporal_function': True, 'begin_point': 't1_2', 'end_point': 't5'}>
+#9	AnnotatorNotes T9	Original: <TIMEX text='Sellest ajast' tid='t1_5' type='DURATION' temporal_function=True anchor_time_id='??' comment="problemaatiline: peaks viitama 'keskmise kiviaja lõpuosale', mida aga tekstis ei märgita">
+#10	AnnotatorNotes T10	Original: <TIMEX text='kevadtalvel' tid='t6' type='DATE' value='XXXX-SP' temporal_function=True mod='START'>
+#11	AnnotatorNotes T11	Original: <TIMEX text='tänini' tid='t1_4' type='DATE' value='PRESENT_REF' temporal_function=True mod='ON_OR_BEFORE'>
+#12	AnnotatorNotes T12	Original: <TIMEX text='veebruaris' tid='t7' type='DATE' value='XXXX-02' temporal_function=True>
+#13	AnnotatorNotes T13	Original: <TIMEX text='märtsis' tid='t8' type='DATE' value='XXXX-03' temporal_function=True>
+#14	AnnotatorNotes T14	Original: <TIMEX text='sellel ajal' tid='t1_15' type='DURATION' temporal_function=True anchor_time_id='??' comment='peaks viitama eelnevalt mainitud kuunimedest moodustuvale perioodile'>
+#15	AnnotatorNotes T15	Original: <TIMEX text='maksimaalselt nädala' tid='t9' type='DURATION' value='P1W' temporal_function=True>
+#16	AnnotatorNotes T16	Original: <TIMEX text='u. 4700-' tid='t1_7' type='DATE' value='BC4700' temporal_function=True mod='APPROX' part_of_interval={'tid': 't1_6', 'type': 'DURATION', 'value': 'PXXXXY', 'temporal_function': True, 'begin_point': 't1_7', 'end_point': 't10'}>
+#17	AnnotatorNotes T17	Original: <TIMEX text='4000 aastat e.Kr.' tid='t10' type='DATE' value='BC4000' temporal_function=True mod='APPROX' part_of_interval={'tid': 't1_6', 'type': 'DURATION', 'value': 'PXXXXY', 'temporal_function': True, 'begin_point': 't1_7', 'end_point': 't10'}>
+#18	AnnotatorNotes T18	Original: <TIMEX text='praegusest' tid='t11' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#19	AnnotatorNotes T19	Original: <TIMEX text='5000-' tid='t1_8' type='DATE' value='BC5000' temporal_function=False part_of_interval={'tid': 't1_9', 'type': 'DURATION', 'value': 'PXXXXY', 'temporal_function': True, 'begin_point': 't1_8', 'end_point': 't12'}>
+#20	AnnotatorNotes T20	Original: <TIMEX text='1800 aastat e.Kr.' tid='t12' type='DATE' value='BC1800' temporal_function=False part_of_interval={'tid': 't1_9', 'type': 'DURATION', 'value': 'PXXXXY', 'temporal_function': True, 'begin_point': 't1_8', 'end_point': 't12'}>
+#21	AnnotatorNotes T21	Original: <TIMEX text='Paari aasta eest' tid='t13' type='DATE' value='1997' temporal_function=True anchor_time_id='t0' mod='APPROX'>
+#22	AnnotatorNotes T22	Original: <TIMEX text='umbes 5700-' tid='t1_10' type='DATE' value='BC5700' temporal_function=True mod='APPROX' part_of_interval={'tid': 't1_11', 'type': 'DURATION', 'value': 'PXXXY', 'temporal_function': True, 'begin_point': 't1_10', 'end_point': 't14'}>
+#23	AnnotatorNotes T23	Original: <TIMEX text='5000 aastat e.Kr.' tid='t14' type='DATE' value='BC5000' temporal_function=True mod='APPROX' part_of_interval={'tid': 't1_11', 'type': 'DURATION', 'value': 'PXXXY', 'temporal_function': True, 'begin_point': 't1_10', 'end_point': 't14'}>
+#24	AnnotatorNotes T24	Original: <TIMEX text='1997. aasta suvel' tid='t15' type='DATE' value='1997-SU' temporal_function=False>
+#25	AnnotatorNotes T25	Original: <TIMEX text='umbes 6000-' tid='t1_12' type='DATE' value='BC6000' temporal_function=True mod='APPROX' part_of_interval={'tid': 't1_13', 'type': 'DURATION', 'value': 'PXXXXY', 'temporal_function': True, 'begin_point': 't1_12', 'end_point': 't16'}>
+#26	AnnotatorNotes T26	Original: <TIMEX text='5000 aastat e.Kr.' tid='t16' type='DATE' value='BC5000' temporal_function=True mod='APPROX' part_of_interval={'tid': 't1_13', 'type': 'DURATION', 'value': 'PXXXXY', 'temporal_function': True, 'begin_point': 't1_12', 'end_point': 't16'}>
+#27	AnnotatorNotes T27	Original: <TIMEX text='samasse' tid='t1_161' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='??' comment='samasse aega: võrreldes eelnevalt kirjeldatud perioodiga'>
+#28	AnnotatorNotes T28	Original: <TIMEX text='hilisemasse aega' tid='t1_16' type='DATE' value='FUTURE_REF' temporal_function=True anchor_time_id='??' comment='hilisem aeg: võrreldes eelnevalt kirjeldatud perioodiga'>
+#29	AnnotatorNotes T29	Original: <TIMEX text='varem' tid='t1_17' type='DATE' value='PAST_REF' temporal_function=True anchor_time_id='??' comment='varem: võrreldes eelnevalt kirjeldatud perioodiga'>
+#30	AnnotatorNotes T30	Original: <TIMEX text='aastaringselt' tid='t17' type='SET' value='P1Y' temporal_function=True freq='12M'>
+#31	AnnotatorNotes T31	Original: <TIMEX text='kevadtalvise' tid='t18' type='DATE' value='XXXX-SP' temporal_function=True>
+#32	AnnotatorNotes T32	Original: <TIMEX text='suvel' tid='t19' type='DATE' value='XXXX-SU' temporal_function=True>
+#33	AnnotatorNotes T33	Original: <TIMEX text='sügisel' tid='t20' type='DATE' value='XXXX-FA' temporal_function=True>
+#34	AnnotatorNotes T34	Original: <TIMEX text='u. 3000-' tid='t21' type='DATE' value='BC3000' temporal_function=True mod='APPROX' part_of_interval={'tid': 't24', 'type': 'DURATION', 'value': 'PXXXY', 'temporal_function': True, 'begin_point': 't21', 'end_point': 't22'}>
+#35	AnnotatorNotes T35	Original: <TIMEX text='2000 aastat e.Kr.' tid='t22' type='DATE' value='BC2000' temporal_function=True mod='APPROX' part_of_interval={'tid': 't24', 'type': 'DURATION', 'value': 'PXXXY', 'temporal_function': True, 'begin_point': 't21', 'end_point': 't22'}>
+#36	AnnotatorNotes T36	Original: <TIMEX text='samaaegsed' tid='t1_18' type='DURATION' temporal_function=True anchor_time_id='??' comment="samaaegne: pole täpselt selge, kas samaaegne 'kiviaja lõpupoolega' või viimase antud dateeringuga">
+#37	AnnotatorNotes T37	Original: <TIMEX text='praeguseks' tid='t25' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#38	AnnotatorNotes T38	Original: <TIMEX text='märksa varem' tid='t1_20' type='DATE' value='PAST_REF' temporal_function=True anchor_time_id='??' comment='märksa varem: võrreldes eelnevalt kirjeldatud perioodiga'>
+#39	AnnotatorNotes T39	Original: <TIMEX text='umbes 5000 aastat e.Kr.' tid='t26' type='DATE' value='BC5000' temporal_function=True mod='APPROX'>
+#40	AnnotatorNotes T40	Original: <TIMEX text='praeguse' tid='t27' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#41	AnnotatorNotes T41	Original: <TIMEX text='Seni' tid='t1_21' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0' mod='ON_OR_BEFORE'>
+T42	Event 1147 1156	vabanesid
+A42	duration T42 days
+A43	duration_confidence T42 low
+A44	class_confidence T42 high
+A45	class T42 OCCURRENCE
+R1	Tlink_SIMULTANEOUS Arg1:T2 Arg2:T42	
+T43	Event 1489 1497	kasvanud
+A46	duration T43 centuries
+A47	duration_confidence T43 high
+A48	class_confidence T43 high
+A49	class T43 OCCURRENCE
+R2	Tlink_SIMULTANEOUS Arg1:T3 Arg2:T43	
+T44	Event 2488 2493	elati
+A50	duration T44 months
+A51	duration_confidence T44 high
+A52	class_confidence T44 high
+A53	class T44 STATE
+R3	Tlink_SIMULTANEOUS Arg1:T10 Arg2:T44	
+T45	Entity 2769 2775	viigri
+R4	Tlink_SIMULTANEOUS Arg1:T15 Arg2:T45	
+T47	Event 1983 1996	mesoliitikumi
+A54	duration T47 centuries
+A55	duration_confidence T47 high
+A56	class_confidence T47 high
+A57	class T47 STATE
+R6	Tlink_IS_INCLUDED Arg1:T7 Arg2:T47	
+R7	Tlink_IS_INCLUDED Arg1:T8 Arg2:T47	
+T48	Event 2091 2096	olnud
+A58	duration T48 centuries
+A59	duration_confidence T48 high
+A60	class_confidence T48 high
+A61	class T48 STATE
+R8	Tlink_IS_INCLUDED Arg1:T9 Arg2:T48	
+T49	Event 1888 1896	üleminek
+A62	duration T49 centuries
+A63	duration_confidence T49 neutral
+A64	class_confidence T49 high
+A65	class T49 OCCURRENCE
+R9	Tlink_SIMULTANEOUS Arg1:T6 Arg2:T49	
+T50	Event 1515 1524	suurendab
+A66	duration T50 centuries
+A67	duration_confidence T50 high
+A68	class_confidence T50 high
+A69	class T50 OCCURRENCE
+R10	Tlink_IS_INCLUDED Arg1:T4 Arg2:T50	
+T51	Event 2564 2572	rändasid
+A70	duration T51 weeks
+A71	duration_confidence T51 high
+A72	class_confidence T51 high
+A73	class T51 I_ACTION
+R11	Tlink_SIMULTANEOUS Arg1:T12 Arg2:T51	
+R12	Tlink_SIMULTANEOUS Arg1:T13 Arg2:T51	
+T52	Event 2652 2659	poegima
+A74	duration T52 days
+A75	duration_confidence T52 neutral
+A76	class_confidence T52 high
+A77	class T52 OCCURRENCE
+R13	has_Argument Arg1:T51 Arg2:T52	
+T53	Event 2688 2695	saagiks
+A78	duration T53 months
+A79	duration_confidence T53 high
+A80	class_confidence T53 high
+A81	class T53 STATE
+R14	Tlink_SIMULTANEOUS Arg1:T14 Arg2:T53	
+R15	Tlink_INCLUDES Arg1:T13 Arg2:T52	
+R16	Tlink_INCLUDES Arg1:T12 Arg2:T52	
+R17	Tlink_INCLUDES Arg1:T11 Arg2:T51	
+T54	Event 3618 3637	nooremale kiviajale
+A82	duration T54 centuries
+A83	duration_confidence T54 high
+A84	class_confidence T54 high
+A85	class T54 STATE
+R18	Tlink_IS_INCLUDED Arg1:T19 Arg2:T54	
+R19	Tlink_IS_INCLUDED Arg1:T20 Arg2:T54	
+T55	Event 3810 3817	uuritud
+A86	duration T55 days
+A87	duration_confidence T55 neutral
+A88	class_confidence T55 high
+A89	class T55 OCCURRENCE
+R20	Tlink_IS_INCLUDED Arg1:T21 Arg2:T55	
+T56	Event 4027 4033	saadud
+A90	duration T56 days
+A91	duration_confidence T56 neutral
+A92	class_confidence T56 high
+A93	class T56 OCCURRENCE
+R21	Tlink_INCLUDES Arg1:T24 Arg2:T56	
+T57	Event 4511 4517	asutud
+A94	duration T57 days
+A95	duration_confidence T57 neutral
+A96	class_confidence T57 high
+A97	class T57 ASPECTUAL
+T58	Event 6325 6330	elati
+A98	duration T58 months
+A99	duration_confidence T58 high
+A100	class_confidence T58 high
+A101	class T58 STATE
+R22	Tlink_SIMULTANEOUS Arg1:T31 Arg2:T58	
+R23	Tlink_SIMULTANEOUS Arg1:T32 Arg2:T58	
+R24	Tlink_SIMULTANEOUS Arg1:T33 Arg2:T58	
+T59	Event 6381 6396	noorema kiviaja
+A102	duration T59 centuries
+A103	duration_confidence T59 high
+A104	class_confidence T59 high
+A105	class T59 STATE
+R25	Tlink_IS_INCLUDED Arg1:T34 Arg2:T59	
+R26	Tlink_IS_INCLUDED Arg1:T35 Arg2:T59	
+T60	Entity 6509 6519	asulakohad
+R27	Tlink_SIMULTANEOUS Arg1:T36 Arg2:T60	
+T61	Event 6806 6811	jäädi
+A106	duration T61 years
+A107	duration_confidence T61 low
+A108	class_confidence T61 high
+A109	class T61 OCCURRENCE
+R28	Tlink_SIMULTANEOUS Arg1:T38 Arg2:T61	
+T62	Entity 7320 7328	Saaremaa
+R29	Tlink_IS_INCLUDED Arg1:T40 Arg2:T62	
+T63	Event 292 330	Ranniku-Eesti kiviaja uurimise projekt
+A110	duration T63 years
+A111	duration_confidence T63 high
+A112	class_confidence T63 high
+A113	class T63 OCCURRENCE
+R30	Tlink_IS_INCLUDED Arg1:T1 Arg2:T63	
+T64	Event 6670 6677	kadunud
+A114	duration T64 centuries
+A115	duration_confidence T64 high
+A116	class_confidence T64 high
+A117	class T64 STATE
+R31	Tlink_IS_INCLUDED Arg1:T37 Arg2:T64	
+T65	Event 6062 6067	eluks
+A118	duration T65 centuries
+A119	duration_confidence T65 high
+A120	class_confidence T65 high
+A121	class T65 STATE
+R32	Tlink_IS_INCLUDED Arg1:T30 Arg2:T65	
+T66	Event 4518 4523	elama
+A122	duration T66 centuries
+A123	duration_confidence T66 high
+A124	class_confidence T66 high
+A125	class T66 STATE
+R33	has_Argument Arg1:T57 Arg2:T66	
+R34	Tlink_INCLUDES Arg1:T29 Arg2:T57	
+R35	Tlink_IS_INCLUDED Arg1:T29 Arg2:T66	
+T67	Event 3516 3527	merepinnast
+A126	duration T67 forever
+A127	duration_confidence T67 neutral
+A128	class_confidence T67 high
+A129	class T67 STATE
+R36	Tlink_IS_INCLUDED Arg1:T18 Arg2:T67	
+T68	Event 2866 2879	eksisteerinud
+A130	duration T68 centuries
+A131	duration_confidence T68 high
+A132	class_confidence T68 high
+A133	class T68 STATE
+R37	Tlink_IS_INCLUDED Arg1:T16 Arg2:T68	
+R38	Tlink_IS_INCLUDED Arg1:T17 Arg2:T68	
+T69	Event 6888 6901	eksisteerinud
+A134	duration T69 centuries
+A135	duration_confidence T69 neutral
+A136	class_confidence T69 high
+A137	class T69 STATE
+R39	Tlink_IS_INCLUDED Arg1:T39 Arg2:T69	
+T70	Event 3918 3926	kuuluvad
+A138	duration T70 centuries
+A139	duration_confidence T70 high
+A140	class_confidence T70 high
+A141	class T70 STATE
+R40	Tlink_IS_INCLUDED Arg1:T22 Arg2:T70	
+R41	Tlink_IS_INCLUDED Arg1:T23 Arg2:T70	
+T71	Event 4426 4437	varaasustus
+A142	duration T71 centuries
+A143	duration_confidence T71 high
+A144	class_confidence T71 neutral
+A145	class T71 STATE
+R42	Tlink_SIMULTANEOUS Arg1:T27 Arg2:T71	
+R43	Tlink_SIMULTANEOUS Arg1:T28 Arg2:T71	
+T46	Entity 1758 1766	hülgeluu
+R5	Tlink_INCLUDES Arg1:T5 Arg2:T46	
+T72	Event 7391 7398	märgiks
+A146	duration T72 centuries
+A147	duration_confidence T72 neutral
+A148	class_confidence T72 high
+A149	class T72 OCCURRENCE
+R44	Tlink_SIMULTANEOUS Arg1:T41 Arg2:T72	
+T73	Event 4059 4065	jäävad
+A150	duration T73 centuries
+A151	duration_confidence T73 high
+A152	class_confidence T73 high
+A153	class T73 STATE
+R45	Tlink_IS_INCLUDED Arg1:T25 Arg2:T73	
+R46	Tlink_IS_INCLUDED Arg1:T26 Arg2:T73	

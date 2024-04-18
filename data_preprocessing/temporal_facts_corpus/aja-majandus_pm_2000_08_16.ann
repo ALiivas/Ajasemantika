@@ -1,0 +1,36 @@
+T1	Timex 47 53	eilsel
+T2	Timex 271 281	eile õhtul
+T3	Timex 613 619	praegu
+T4	Timex 1121 1129	tänaseks
+A1	type T1 DATE
+A2	type T2 TIME
+A3	type T3 DATE
+A4	type T4 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='eilsel' tid='t1' type='DATE' value='2000-08-15' temporal_function=True>
+#2	AnnotatorNotes T2	Original: <TIMEX text='eile õhtul' tid='t2' type='TIME' value='2000-08-15TEV' temporal_function=True>
+#3	AnnotatorNotes T3	Original: <TIMEX text='praegu' tid='t3' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#4	AnnotatorNotes T4	Original: <TIMEX text='tänaseks' tid='t4' type='DATE' value='2000-08-16' temporal_function=True>
+T5	Event 69 82	üldkoosolekul
+A5	duration T5 minutes
+A6	duration_confidence T5 neutral
+A7	class_confidence T5 high
+A8	class T5 OCCURRENCE
+R1	Tlink_INCLUDES Arg1:T1 Arg2:T5	
+T6	Event 259 264	ütles
+A9	duration T6 seconds
+A10	duration_confidence T6 neutral
+A11	class_confidence T6 high
+A12	class T6 REPORTING
+R2	Tlink_INCLUDES Arg1:T2 Arg2:T6	
+T7	Event 610 612	on
+A13	duration T7 weeks
+A14	duration_confidence T7 neutral
+A15	class_confidence T7 high
+A16	class T7 STATE
+R3	Tlink_IS_INCLUDED Arg1:T3 Arg2:T7	
+T8	Event 1145 1157	deponeerinud
+A17	duration T8 weeks
+A18	duration_confidence T8 neutral
+A19	class_confidence T8 high
+A20	class T8 OCCURRENCE
+R4	Tlink_AFTER Arg1:T4 Arg2:T8	

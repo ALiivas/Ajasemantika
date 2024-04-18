@@ -1,0 +1,66 @@
+T1	Timex 16 27	2002. aasta
+T2	Timex 83 89	reedel
+T3	Timex 154 159	1962-
+T4	Timex 159 172	2002 aastatel
+T5	Timex 346 364	viimastel aastatel
+T6	Timex 490 499	tänapäeva
+T7	Timex 528 537	tänapäeva
+T8	Timex 627 635	12 tundi
+T9	Timex 689 695	tänavu
+A1	type T1 DATE
+A2	type T2 DATE
+A3	type T3 DATE
+A4	type T4 DATE
+A5	type T5 DURATION
+A6	type T6 DATE
+A7	type T7 DATE
+A8	type T8 DURATION
+A9	type T9 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='2002. aasta' tid='t1' type='DATE' value='2002' temporal_function=False>
+#2	AnnotatorNotes T2	Original: <TIMEX text='reedel' tid='t2' type='DATE' value='2003-02-21' temporal_function=True>
+#3	AnnotatorNotes T3	Original: <TIMEX text='1962-' tid='t3' type='DATE' value='1962' temporal_function=False part_of_interval={'tid': 't5', 'type': 'DURATION', 'value': 'PXXY', 'temporal_function': True, 'begin_point': 't3', 'end_point': 't4'}>
+#4	AnnotatorNotes T4	Original: <TIMEX text='2002 aastatel' tid='t4' type='DATE' value='2002' temporal_function=False part_of_interval={'tid': 't5', 'type': 'DURATION', 'value': 'PXXY', 'temporal_function': True, 'begin_point': 't3', 'end_point': 't4'}>
+#5	AnnotatorNotes T5	Original: <TIMEX text='viimastel aastatel' tid='t6' type='DURATION' value='PXY' temporal_function=True begin_point={'tid': 't7', 'type': 'DATE', 'value': 'XXXX', 'temporal_function': True} end_point='t0'>
+#6	AnnotatorNotes T6	Original: <TIMEX text='tänapäeva' tid='t8' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#7	AnnotatorNotes T7	Original: <TIMEX text='tänapäeva' tid='t9' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#8	AnnotatorNotes T8	Original: <TIMEX text='12 tundi' tid='t10' type='DURATION' value='PT12H' temporal_function=False>
+#9	AnnotatorNotes T9	Original: <TIMEX text='tänavu' tid='t11' type='DATE' value='2003' temporal_function=True>
+T10	Event 10 15	annab
+A10	duration T10 minutes
+A11	duration_confidence T10 neutral
+A12	class_confidence T10 high
+A13	class T10 OCCURRENCE
+R1	Tlink_INCLUDES Arg1:T2 Arg2:T10	
+T11	Entity 636 650	helisalvestisi
+R2	Tlink_SIMULTANEOUS Arg1:T8 Arg2:T11	
+T12	Event 365 371	teinud
+A14	duration T12 minutes
+A15	duration_confidence T12 neutral
+A16	class_confidence T12 high
+A17	class T12 I_ACTION
+T13	Event 372 386	helisalvestusi
+A18	duration T13 minutes
+A19	duration_confidence T13 neutral
+A20	class_confidence T13 high
+A21	class T13 OCCURRENCE
+R3	has_Argument Arg1:T12 Arg2:T13	
+R4	Tlink_INCLUDES Arg1:T5 Arg2:T12	
+T14	Entity 500 512	jõuluvanasid
+R5	Tlink_INCLUDES Arg1:T6 Arg2:T14	
+T15	Entity 538 553	pärimusmuusikat
+R6	Tlink_INCLUDES Arg1:T7 Arg2:T15	
+T16	Event 173 180	kogutud
+A22	duration T16 years
+A23	duration_confidence T16 high
+A24	class_confidence T16 high
+A25	class T16 OCCURRENCE
+R7	Tlink_IS_INCLUDED Arg1:T4 Arg2:T16	
+R8	Tlink_IS_INCLUDED Arg1:T3 Arg2:T16	
+T17	Entity 28 46	rahvaluulepreemiad
+R9	Tlink_INCLUDES Arg1:T1 Arg2:T17	
+T18	Event 676 685	suuruseks
+A26	duration T18 minutes
+A27	duration_confidence T18 low
+A28	class_confidence T18 high
+A29	class T18 STATE
+R10	Tlink_INCLUDES Arg1:T9 Arg2:T18	
