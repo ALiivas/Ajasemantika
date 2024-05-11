@@ -1,9 +1,0 @@
-T1	Timex 837 841	Täna
-A1	type T1 DATE
-#1	AnnotatorNotes T1	Original: <TIMEX text='Täna' tid='t1' type='DATE' value='XXXX-XX-XX' temporal_function=True anchor_time_id='??' comment='ankurdub sündmuse külge: hooaja kaheksanda etapi Kanada GP'>
-T2	Event 850 858	pidupäev
-A2	duration T2 hours
-A3	duration_confidence T2 high
-A4	class_confidence T2 high
-A5	class T2 OCCURRENCE
-R1	Tlink_SIMULTANEOUS Arg1:T1 Arg2:T2	
