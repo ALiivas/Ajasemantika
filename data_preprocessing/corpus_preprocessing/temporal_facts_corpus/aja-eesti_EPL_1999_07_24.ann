@@ -1,0 +1,126 @@
+T1	Timex 0 9	Tänavusel
+T2	Timex 64 74	eile õhtul
+T3	Timex 234 246	Esimene päev
+T4	Timex 313 328	eelmisel aastal
+T5	Timex 334 340	Varsti
+T6	Timex 521 532	igal aastal
+T7	Timex 645 663	järgmiseks aastaks
+T8	Timex 837 839	23
+T9	Timex 956 961	aasta
+T10	Timex 979 986	Suvised
+T11	Timex 1268 1270	22
+T12	Timex 1286 1288	21
+T13	Timex 1310 1325	pea igal aastal
+T14	Timex 1839 1850	Pühapäevani
+A1	type T1 DATE
+A2	type T2 TIME
+A3	type T3 DATE
+A4	type T4 DATE
+A5	type T5 DATE
+A6	type T6 SET
+A7	type T7 DATE
+A8	type T8 DURATION
+A9	type T9 DATE
+A10	type T10 DATE
+A11	type T11 DURATION
+A12	type T12 DURATION
+A13	type T13 SET
+A14	type T14 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='Tänavusel' tid='t1' type='DATE' value='1999' temporal_function=True>
+#2	AnnotatorNotes T2	Original: <TIMEX text='eile õhtul' tid='t2' type='TIME' value='1999-07-23TEV' temporal_function=True>
+#3	AnnotatorNotes T3	Original: <TIMEX text='Esimene päev' tid='t1_1' type='DATE' value='1999-07-23' temporal_function=True comment='normaliseerimine teksti põhjal järeldamist'>
+#4	AnnotatorNotes T4	Original: <TIMEX text='eelmisel aastal' tid='t3' type='DATE' value='1998' temporal_function=True>
+#5	AnnotatorNotes T5	Original: <TIMEX text='Varsti' tid='t1_2' type='DATE' value='FUTURE_REF' temporal_function=True>
+#6	AnnotatorNotes T6	Original: <TIMEX text='igal aastal' tid='t4' type='SET' value='P1Y' temporal_function=True quant='EVERY'>
+#7	AnnotatorNotes T7	Original: <TIMEX text='järgmiseks aastaks' tid='t5' type='DATE' value='XXXX' temporal_function=True comment='üldises tähenduses'>
+#8	AnnotatorNotes T8	Original: <TIMEX text='23' tid='t6' type='DURATION' value='P23Y' temporal_function=True>
+#9	AnnotatorNotes T9	Original: <TIMEX text='aasta' tid='t7' type='DATE' value='XXXX' temporal_function=True>
+#10	AnnotatorNotes T10	Original: <TIMEX text='Suvised' tid='t8' type='DATE' value='XXXX-SU' temporal_function=True>
+#11	AnnotatorNotes T11	Original: <TIMEX text='22' tid='t1_3' type='DURATION' value='P22Y' temporal_function=True>
+#12	AnnotatorNotes T12	Original: <TIMEX text='21' tid='t1_4' type='DURATION' value='P21Y' temporal_function=True>
+#13	AnnotatorNotes T13	Original: <TIMEX text='pea igal aastal' tid='t9' type='SET' value='P1Y' temporal_function=True quant='EVERY' comment='mod problemaatiline'>
+#14	AnnotatorNotes T14	Original: <TIMEX text='Pühapäevani' tid='t10' type='DATE' value='1999-07-25' temporal_function=True>
+T15	Event 10 14	peol
+A15	duration T15 hours
+A16	duration_confidence T15 high
+A17	class_confidence T15 high
+A18	class T15 OCCURRENCE
+R1	Tlink_INCLUDES Arg1:T1 Arg2:T15	
+T16	Event 60 63	oli
+A19	duration T16 hours
+A20	duration_confidence T16 high
+A21	class_confidence T16 high
+A22	class T16 STATE
+R2	Tlink_SIMULTANEOUS Arg1:T2 Arg2:T16	
+T17	Event 247 250	tõi
+A23	duration T17 hours
+A24	duration_confidence T17 high
+A25	class_confidence T17 high
+A26	class T17 OCCURRENCE
+R3	Tlink_SIMULTANEOUS Arg1:T3 Arg2:T17	
+T18	Event 279 281	on
+A27	duration T18 hours
+A28	duration_confidence T18 neutral
+A29	class_confidence T18 high
+A30	class T18 STATE
+R4	Tlink_BEFORE Arg1:T4 Arg2:T18	
+T19	Event 480 486	kasvab
+A31	duration T19 days
+A32	duration_confidence T19 neutral
+A33	class_confidence T19 high
+A34	class T19 OCCURRENCE
+R5	Tlink_INCLUDES Arg1:T6 Arg2:T19	
+T20	Event 692 699	võtavad
+A35	duration T20 days
+A36	duration_confidence T20 neutral
+A37	class_confidence T20 high
+A38	class T20 OCCURRENCE
+R6	Tlink_INCLUDES Arg1:T7 Arg2:T20	
+T21	Entity 830 834	Tõnu
+R7	Tlink_SIMULTANEOUS Arg1:T8 Arg2:T21	
+T22	Event 962 973	tippsündmus
+A39	duration T22 days
+A40	duration_confidence T22 high
+A41	class_confidence T22 high
+A42	class T22 OCCURRENCE
+R8	Tlink_INCLUDES Arg1:T9 Arg2:T22	
+T23	Event 987 994	plaanid
+A43	duration T23 days
+A44	duration_confidence T23 neutral
+A45	class_confidence T23 high
+A46	class T23 OCCURRENCE
+R9	Tlink_INCLUDES Arg1:T10 Arg2:T23	
+T24	Entity 1261 1265	Ülle
+T25	Entity 1276 1283	Jaanika
+R10	Tlink_SIMULTANEOUS Arg1:T11 Arg2:T24	
+R11	Tlink_SIMULTANEOUS Arg1:T12 Arg2:T25	
+T26	Event 1303 1309	käinud
+A47	duration T26 days
+A48	duration_confidence T26 high
+A49	class_confidence T26 high
+A50	class T26 I_ACTION
+T27	Event 1294 1302	üritusel
+A51	duration T27 days
+A52	duration_confidence T27 high
+A53	class_confidence T27 high
+A54	class T27 OCCURRENCE
+R12	Tlink_INCLUDES Arg1:T13 Arg2:T26	
+T28	Event 1873 1881	festival
+A55	duration T28 days
+A56	duration_confidence T28 high
+A57	class_confidence T28 high
+A58	class T28 OCCURRENCE
+R13	Tlink_IS_INCLUDED Arg1:T14 Arg2:T28	
+T29	Event 341 346	peame
+A59	duration T29 seconds
+A60	duration_confidence T29 neutral
+A61	class_confidence T29 high
+A62	class T29 MODAL
+T30	Event 364 371	hakkama
+A63	duration T30 seconds
+A64	duration_confidence T30 neutral
+A65	class_confidence T30 high
+A66	class T30 ASPECTUAL
+R14	has_Argument Arg1:T29 Arg2:T30	
+R15	Tlink_SIMULTANEOUS Arg1:T5 Arg2:T29	
+R16	has_Argument Arg1:T26 Arg2:T27	

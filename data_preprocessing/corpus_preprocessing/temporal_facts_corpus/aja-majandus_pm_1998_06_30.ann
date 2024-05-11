@@ -1,0 +1,319 @@
+T1	Timex 292 310	paar aastat tagasi
+T2	Timex 423 431	sel ajal
+T3	Timex 528 538	jaanipäeva
+T4	Timex 945 954	15 aastat
+T5	Timex 1171 1183	Iga-aastased
+T6	Timex 1319 1328	14 aastat
+T7	Timex 1457 1472	14 aasta pärast
+T8	Timex 1725 1729	Seni
+T9	Timex 1954 1962	praegust
+T10	Timex 2439 2462	Läinud aasta septembris
+T11	Timex 2907 2915	edaspidi
+T12	Timex 3190 3196	aastas
+T13	Timex 3207 3224	24 aastat järjest
+T14	Timex 3345 3349	Täna
+T15	Timex 3460 3470	10. juunil
+T16	Timex 3518 3523	täna-
+T17	Timex 3523 3528	homme
+T18	Timex 3888 3894	praegu
+T19	Timex 4074 4079	viie-
+T20	Timex 4079 4091	kuue aastaga
+T21	Timex 4758 4769	kuus aastat
+T22	Timex 5038 5056	viimastel aastatel
+T23	Timex 5177 5183	aastas
+T24	Timex 5204 5210	päevas
+T25	Timex 5227 5236	laupäevad
+T26	Timex 5240 5250	pühapäevad
+T27	Timex 5294 5302	iga päev
+T28	Timex 5381 5393	1995. aastal
+T29	Timex 5521 5539	Parematel päevadel
+T30	Timex 5591 5597	päevas
+T31	Timex 5840 5853	palju aastaid
+T32	Timex 5903 5907	kuus
+T33	Timex 5941 5951	sel aastal
+T34	Timex 6017 6023	Praegu
+A1	type T1 DATE
+A2	type T2 DATE
+A3	type T3 DATE
+A4	type T4 DURATION
+A5	type T5 SET
+A6	type T6 DURATION
+A7	type T7 DURATION
+A8	type T8 DATE
+A9	type T9 DATE
+A10	type T10 DATE
+A11	type T11 DATE
+A12	type T12 SET
+A13	type T13 DURATION
+A14	type T14 DATE
+A15	type T15 DATE
+A16	type T16 DATE
+A17	type T17 DATE
+A18	type T18 DATE
+A19	type T19 DURATION
+A20	type T20 DURATION
+A21	type T21 DURATION
+A22	type T22 DURATION
+A23	type T23 SET
+A24	type T24 SET
+A25	type T25 DATE
+A26	type T26 DATE
+A27	type T27 SET
+A28	type T28 DATE
+A29	type T29 DURATION
+A30	type T30 SET
+A31	type T31 DURATION
+A32	type T32 SET
+A33	type T33 DATE
+A34	type T34 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='paar aastat tagasi' tid='t1' type='DATE' value='1996' temporal_function=True mod='APPROX'>
+#2	AnnotatorNotes T2	Original: <TIMEX text='sel ajal' tid='t1_1' type='DATE' value='1996' temporal_function=True anchor_time_id='t1' mod='APPROX'>
+#3	AnnotatorNotes T3	Original: <TIMEX text='jaanipäeva' tid='t2' type='DATE' value='1998-06-24' temporal_function=True>
+#4	AnnotatorNotes T4	Original: <TIMEX text='15 aastat' tid='t3' type='DURATION' value='P15Y' temporal_function=False>
+#5	AnnotatorNotes T5	Original: <TIMEX text='Iga-aastased' tid='t4' type='SET' value='P1Y' temporal_function=True quant='EVERY'>
+#6	AnnotatorNotes T6	Original: <TIMEX text='14 aastat' tid='t5' type='DURATION' value='P14Y' temporal_function=False>
+#7	AnnotatorNotes T7	Original: <TIMEX text='14 aasta pärast' tid='t6' type='DURATION' value='P14Y' temporal_function=True begin_point='??' end_point='??'>
+#8	AnnotatorNotes T8	Original: <TIMEX text='Seni' tid='t1_2' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0' mod='ON_OR_BEFORE'>
+#9	AnnotatorNotes T9	Original: <TIMEX text='praegust' tid='t7' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#10	AnnotatorNotes T10	Original: <TIMEX text='Läinud aasta septembris' tid='t9' type='DATE' value='1997-09' temporal_function=True>
+#11	AnnotatorNotes T11	Original: <TIMEX text='edaspidi' tid='t1_3' type='DATE' value='FUTURE_REF' temporal_function=True anchor_time_id='t0'>
+#12	AnnotatorNotes T12	Original: <TIMEX text='aastas' tid='t1_4' type='SET' value='P1Y' temporal_function=True>
+#13	AnnotatorNotes T13	Original: <TIMEX text='24 aastat järjest' tid='t10' type='DURATION' value='P24Y' temporal_function=False>
+#14	AnnotatorNotes T14	Original: <TIMEX text='Täna' tid='t11' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#15	AnnotatorNotes T15	Original: <TIMEX text='10. juunil' tid='t12' type='DATE' value='1998-06-10' temporal_function=True>
+#16	AnnotatorNotes T16	Original: <TIMEX text='täna-' tid='t1_5' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#17	AnnotatorNotes T17	Original: <TIMEX text='homme' tid='t1_6' type='DATE' value='FUTURE_REF' temporal_function=True anchor_time_id='t0'>
+#18	AnnotatorNotes T18	Original: <TIMEX text='praegu' tid='t13' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#19	AnnotatorNotes T19	Original: <TIMEX text='viie-' tid='t1_7' type='DURATION' value='P5Y' temporal_function=True>
+#20	AnnotatorNotes T20	Original: <TIMEX text='kuue aastaga' tid='t1_8' type='DURATION' value='P6Y' temporal_function=True>
+#21	AnnotatorNotes T21	Original: <TIMEX text='kuus aastat' tid='t14' type='DURATION' value='P6Y' temporal_function=False>
+#22	AnnotatorNotes T22	Original: <TIMEX text='viimastel aastatel' tid='t15' type='DURATION' value='PXY' temporal_function=True begin_point={'tid': 't16', 'type': 'DATE', 'value': 'XXXX', 'temporal_function': True} end_point='t0'>
+#23	AnnotatorNotes T23	Original: <TIMEX text='aastas' tid='t1_10' type='SET' value='P1Y' temporal_function=True>
+#24	AnnotatorNotes T24	Original: <TIMEX text='päevas' tid='t1_11' type='SET' value='P1D' temporal_function=True>
+#25	AnnotatorNotes T25	Original: <TIMEX text='laupäevad' tid='t1_12' type='DATE' value='XXXX-WXX-6' temporal_function=True>
+#26	AnnotatorNotes T26	Original: <TIMEX text='pühapäevad' tid='t1_13' type='DATE' value='XXXX-WXX-7' temporal_function=True>
+#27	AnnotatorNotes T27	Original: <TIMEX text='iga päev' tid='t17' type='SET' value='P1D' temporal_function=True quant='EVERY'>
+#28	AnnotatorNotes T28	Original: <TIMEX text='1995. aastal' tid='t18' type='DATE' value='1995' temporal_function=False>
+#29	AnnotatorNotes T29	Original: <TIMEX text='Parematel päevadel' tid='t1_14' type='DURATION' temporal_function=True comment='probleemne: ilma järjepidevuseta kestvus'>
+#30	AnnotatorNotes T30	Original: <TIMEX text='päevas' tid='t1_15' type='SET' value='P1D' temporal_function=True>
+#31	AnnotatorNotes T31	Original: <TIMEX text='palju aastaid' tid='t19' type='DURATION' value='PXY' temporal_function=True>
+#32	AnnotatorNotes T32	Original: <TIMEX text='kuus' tid='t1_16' type='SET' value='P1M' temporal_function=True>
+#33	AnnotatorNotes T33	Original: <TIMEX text='sel aastal' tid='t20' type='DATE' value='1998' temporal_function=True>
+#34	AnnotatorNotes T34	Original: <TIMEX text='Praegu' tid='t21' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+T35	Event 266 274	pakkusid
+A35	duration T35 minutes
+A36	duration_confidence T35 neutral
+A37	class_confidence T35 high
+A38	class T35 I_ACTION
+R1	Tlink_INCLUDES Arg1:T1 Arg2:T35	
+T36	Event 415 422	huvitas
+A39	duration T36 months
+A40	duration_confidence T36 neutral
+A41	class_confidence T36 high
+A42	class T36 STATE
+R2	Tlink_SIMULTANEOUS Arg1:T2 Arg2:T36	
+T37	Event 539 544	tegid
+A43	duration T37 minutes
+A44	duration_confidence T37 neutral
+A45	class_confidence T37 high
+A46	class T37 I_ACTION
+T38	Event 549 554	katse
+A47	duration T38 minutes
+A48	duration_confidence T38 neutral
+A49	class_confidence T38 high
+A50	class T38 OCCURRENCE
+R3	has_Argument Arg1:T37 Arg2:T38	
+R4	Tlink_AFTER Arg1:T3 Arg2:T37	
+T39	Event 955 962	uurinud
+A51	duration T39 years
+A52	duration_confidence T39 high
+A53	class_confidence T39 high
+A54	class T39 OCCURRENCE
+R6	Tlink_SIMULTANEOUS Arg1:T4 Arg2:T39	
+T40	Event 1184 1194	dividendid
+A55	duration T40 minutes
+A56	duration_confidence T40 neutral
+A57	class_confidence T40 high
+A58	class T40 OCCURRENCE
+R5	Tlink_INCLUDES Arg1:T5 Arg2:T40	
+T41	Event 1294 1306	tasuvusajaks
+A59	duration T41 years
+A60	duration_confidence T41 high
+A61	class_confidence T41 high
+A62	class T41 STATE
+R7	Tlink_SIMULTANEOUS Arg1:T6 Arg2:T41	
+T42	Event 1746 1751	olnud
+A63	duration T42 years
+A64	duration_confidence T42 high
+A65	class_confidence T42 high
+A66	class T42 STATE
+R8	Tlink_SIMULTANEOUS Arg1:T8 Arg2:T42	
+T43	Event 1473 1484	aktsionärid
+A67	duration T43 years
+A68	duration_confidence T43 neutral
+A69	class_confidence T43 high
+A70	class T43 STATE
+R9	Tlink_BEFORE Arg1:T7 Arg2:T43	
+T44	Event 1977 1982	tõusu
+A71	duration T44 months
+A72	duration_confidence T44 neutral
+A73	class_confidence T44 high
+A74	class T44 OCCURRENCE
+R10	Tlink_IS_INCLUDED Arg1:T9 Arg2:T44	
+T45	Event 2463 2471	käivitus
+A75	duration T45 instant
+A76	duration_confidence T45 high
+A77	class_confidence T45 high
+A78	class T45 OCCURRENCE
+R11	Tlink_INCLUDES Arg1:T10 Arg2:T45	
+T46	Event 2916 2921	peaks
+A79	duration T46 years
+A80	duration_confidence T46 neutral
+A81	class_confidence T46 high
+A82	class T46 MODAL
+T47	Event 2927 2935	arendama
+A83	duration T47 years
+A84	duration_confidence T47 neutral
+A85	class_confidence T47 high
+A86	class T47 OCCURRENCE
+R12	has_Argument Arg1:T46 Arg2:T47	
+R13	Tlink_INCLUDES Arg1:T11 Arg2:T46	
+T48	Event 3162 3177	investeeritakse
+A87	duration T48 years
+A88	duration_confidence T48 high
+A89	class_confidence T48 high
+A90	class T48 OCCURRENCE
+R14	Tlink_IS_INCLUDED Arg1:T12 Arg2:T48	
+T49	Event 3350 3352	on
+A91	duration T49 weeks
+A92	duration_confidence T49 high
+A93	class_confidence T49 high
+A94	class T49 STATE
+R15	Tlink_IS_INCLUDED Arg1:T14 Arg2:T49	
+T50	Event 3477 3483	võttis
+A95	duration T50 seconds
+A96	duration_confidence T50 neutral
+A97	class_confidence T50 high
+A98	class T50 OCCURRENCE
+R16	Tlink_INCLUDES Arg1:T15 Arg2:T50	
+T51	Event 3535 3543	kuulutab
+A99	duration T51 minutes
+A100	duration_confidence T51 neutral
+A101	class_confidence T51 high
+A102	class T51 OCCURRENCE
+R17	Tlink_INCLUDES Arg1:T17 Arg2:T51	
+R18	Tlink_INCLUDES Arg1:T16 Arg2:T51	
+T52	Event 3895 3903	50 senti
+A103	duration T52 days
+A104	duration_confidence T52 neutral
+A105	class_confidence T52 high
+A106	class T52 STATE
+R19	Tlink_SIMULTANEOUS Arg1:T18 Arg2:T52	
+T53	Event 4026 4035	alandanud
+A107	duration T53 years
+A108	duration_confidence T53 high
+A109	class_confidence T53 high
+A110	class T53 I_ACTION
+T54	Event 4051 4056	hinda
+A111	duration T54 years
+A112	duration_confidence T54 neutral
+A113	class_confidence T54 high
+A114	class T54 STATE
+R20	has_Argument Arg1:T53 Arg2:T54	
+R21	Tlink_SIMULTANEOUS Arg1:T19 Arg2:T53	
+R22	Tlink_SIMULTANEOUS Arg1:T20 Arg2:T53	
+R23	Tlink_IS_INCLUDED Arg1:T19 Arg2:T54	
+R24	Tlink_IS_INCLUDED Arg1:T20 Arg2:T54	
+T55	Event 5032 5037	olnud
+A115	duration T55 years
+A116	duration_confidence T55 high
+A117	class_confidence T55 high
+A118	class T55 STATE
+R25	Tlink_SIMULTANEOUS Arg1:T22 Arg2:T55	
+T56	Event 5367 5375	kirjutas
+A119	duration T56 minutes
+A120	duration_confidence T56 neutral
+A121	class_confidence T56 high
+A122	class T56 OCCURRENCE
+R26	Tlink_INCLUDES Arg1:T28 Arg2:T56	
+T57	Event 5581 5590	500 marka
+A123	duration T57 hours
+A124	duration_confidence T57 high
+A125	class_confidence T57 high
+A126	class T57 OCCURRENCE
+R27	Tlink_SIMULTANEOUS Arg1:T30 Arg2:T57	
+T58	Event 5540 5544	toob
+A127	duration T58 hours
+A128	duration_confidence T58 neutral
+A129	class_confidence T58 high
+A130	class T58 OCCURRENCE
+R28	Tlink_INCLUDES Arg1:T29 Arg2:T58	
+T59	Event 5831 5839	toetunud
+A131	duration T59 years
+A132	duration_confidence T59 high
+A133	class_confidence T59 high
+A134	class T59 OCCURRENCE
+R29	Tlink_SIMULTANEOUS Arg1:T31 Arg2:T59	
+T60	Event 5936 5940	saab
+A135	duration T60 months
+A136	duration_confidence T60 high
+A137	class_confidence T60 high
+A138	class T60 MODAL
+T61	Event 5970 5978	kasutada
+A139	duration T61 months
+A140	duration_confidence T61 high
+A141	class_confidence T61 high
+A142	class T61 I_ACTION
+R30	has_Argument Arg1:T60 Arg2:T61	
+R31	Tlink_SIMULTANEOUS Arg1:T33 Arg2:T60	
+T62	Event 5882 5902	viit tuhandet krooni
+A143	duration T62 weeks
+A144	duration_confidence T62 neutral
+A145	class_confidence T62 neutral
+A146	class T62 OCCURRENCE
+R32	Tlink_SIMULTANEOUS Arg1:T32 Arg2:T62	
+T63	Event 6024 6028	peab
+A147	duration T63 weeks
+A148	duration_confidence T63 neutral
+A149	class_confidence T63 high
+A150	class T63 MODAL
+T64	Event 6040 6061	telefoniläbirääkimisi
+A151	duration T64 weeks
+A152	duration_confidence T64 neutral
+A153	class_confidence T64 high
+A154	class T64 OCCURRENCE
+R33	has_Argument Arg1:T63 Arg2:T64	
+R34	Tlink_IS_INCLUDED Arg1:T34 Arg2:T63	
+T65	Event 5303 5308	jõuab
+A155	duration T65 hours
+A156	duration_confidence T65 neutral
+A157	class_confidence T65 high
+A158	class T65 OCCURRENCE
+R35	Tlink_SIMULTANEOUS Arg1:T27 Arg2:T65	
+T66	Event 5170 5176	500 MW
+A159	duration T66 months
+A160	duration_confidence T66 high
+A161	class_confidence T66 high
+A162	class T66 STATE
+R36	Tlink_SIMULTANEOUS Arg1:T23 Arg2:T66	
+T67	Event 5195 5203	megavatt
+A163	duration T67 hours
+A164	duration_confidence T67 high
+A165	class_confidence T67 high
+A166	class T67 STATE
+R37	Tlink_SIMULTANEOUS Arg1:T24 Arg2:T67	
+R38	Tlink_SIMULTANEOUS Arg1:T25 Arg2:T67	
+R39	Tlink_SIMULTANEOUS Arg1:T26 Arg2:T67	
+T68	Event 4783 4790	möllust
+A167	duration T68 months
+A168	duration_confidence T68 neutral
+A169	class_confidence T68 high
+A170	class T68 OCCURRENCE
+R40	Tlink_BEFORE Arg1:T21 Arg2:T68	
+T69	Event 4752 4757	Oleme
+A171	duration T69 months
+A172	duration_confidence T69 neutral
+A173	class_confidence T69 high
+A174	class T69 STATE
+R41	Tlink_AFTER Arg1:T21 Arg2:T69	
+R42	Tlink_SIMULTANEOUS Arg1:T13 Arg2:T48	

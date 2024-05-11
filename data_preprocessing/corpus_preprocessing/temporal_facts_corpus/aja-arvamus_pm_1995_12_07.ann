@@ -1,0 +1,33 @@
+T1	Timex 230 235	jõule
+T2	Timex 625 637	jõulude ajal
+T3	Timex 776 788	jõulude ajal
+A1	type T1 DURATION
+A2	type T2 DURATION
+A3	type T3 DURATION
+#1	AnnotatorNotes T1	Original: <TIMEX text='jõule' tid='t1_2' type='DURATION' value='P2D' temporal_function=True begin_point={'tid': 't1_3', 'type': 'DATE', 'value': '1995-12-24', 'temporal_function': True} end_point={'tid': 't1_4', 'type': 'DATE', 'value': '1995-12-26', 'temporal_function': True}>
+#2	AnnotatorNotes T2	Original: <TIMEX text='jõulude ajal' tid='t1' type='DURATION' value='P2D' temporal_function=True begin_point={'tid': 't2', 'type': 'DATE', 'value': '1995-12-24', 'temporal_function': True} end_point={'tid': 't3', 'type': 'DATE', 'value': '1995-12-26', 'temporal_function': True}>
+#3	AnnotatorNotes T3	Original: <TIMEX text='jõulude ajal' tid='t4' type='DURATION' value='P2D' temporal_function=True begin_point={'tid': 't5', 'type': 'DATE', 'value': '1995-12-24', 'temporal_function': True} end_point={'tid': 't6', 'type': 'DATE', 'value': '1995-12-26', 'temporal_function': True}>
+T4	Event 644 653	soodustus
+A4	duration T4 days
+A5	duration_confidence T4 high
+A6	class_confidence T4 high
+A7	class T4 OCCURRENCE
+R1	Tlink_SIMULTANEOUS Arg1:T2 Arg2:T4	
+T5	Event 789 800	kirjutaksid
+A8	duration T5 minutes
+A9	duration_confidence T5 high
+A10	class_confidence T5 high
+A11	class T5 OCCURRENCE
+R2	Tlink_INCLUDES Arg1:T3 Arg2:T5	
+T6	Event 236 240	saab
+A12	duration T6 days
+A13	duration_confidence T6 high
+A14	class_confidence T6 high
+A15	class T6 MODAL
+T7	Event 267 272	saata
+A16	duration T7 minutes
+A17	duration_confidence T7 neutral
+A18	class_confidence T7 high
+A19	class T7 I_ACTION
+R3	Tlink_AFTER Arg1:T1 Arg2:T6	
+R4	has_Argument Arg1:T6 Arg2:T7	

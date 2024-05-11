@@ -1,0 +1,69 @@
+T1	Timex 29 44	möödunud aastal
+T2	Timex 120 126	reedel
+T3	Timex 199 211	2000. aastat
+T4	Timex 323 336	aasta alguses
+T5	Timex 632 643	2000. aasta
+T6	Timex 830 842	1999. aastal
+T7	Timex 977 988	2000. aasta
+A1	type T1 DATE
+A2	type T2 DATE
+A3	type T3 DATE
+A4	type T4 DATE
+A5	type T5 DATE
+A6	type T6 DATE
+A7	type T7 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='möödunud aastal' tid='t1' type='DATE' value='1999' temporal_function=True>
+#2	AnnotatorNotes T2	Original: <TIMEX text='reedel' tid='t2' type='DATE' value='2000-01-07' temporal_function=True>
+#3	AnnotatorNotes T3	Original: <TIMEX text='2000. aastat' tid='t3' type='DATE' value='2000' temporal_function=False>
+#4	AnnotatorNotes T4	Original: <TIMEX text='aasta alguses' tid='t4' type='DATE' value='2000' temporal_function=True anchor_time_id='t3' mod='START'>
+#5	AnnotatorNotes T5	Original: <TIMEX text='2000. aasta' tid='t5' type='DATE' value='2000' temporal_function=False>
+#6	AnnotatorNotes T6	Original: <TIMEX text='1999. aastal' tid='t6' type='DATE' value='1999' temporal_function=False>
+#7	AnnotatorNotes T7	Original: <TIMEX text='2000. aasta' tid='t7' type='DATE' value='2000' temporal_function=False>
+T8	Event 25 28	sai
+A8	duration T8 months
+A9	duration_confidence T8 neutral
+A10	class_confidence T8 high
+A11	class T8 OCCURRENCE
+T9	Event 191 198	alustas
+A12	duration T9 days
+A13	duration_confidence T9 neutral
+A14	class_confidence T9 high
+A15	class T9 OCCURRENCE
+R2	Tlink_INCLUDES Arg1:T3 Arg2:T9	
+T10	Event 989 1003	riigieelarvest
+A16	duration T10 months
+A17	duration_confidence T10 high
+A18	class_confidence T10 neutral
+A19	class T10 STATE
+R3	Tlink_SIMULTANEOUS Arg1:T7 Arg2:T10	
+T11	Event 644 656	riigieelarve
+A20	duration T11 months
+A21	duration_confidence T11 high
+A22	class_confidence T11 neutral
+A23	class T11 STATE
+R4	Tlink_SIMULTANEOUS Arg1:T5 Arg2:T11	
+T12	Event 825 829	pidi
+A24	duration T12 months
+A25	duration_confidence T12 neutral
+A26	class_confidence T12 high
+A27	class T12 MODAL
+T13	Event 843 848	saama
+A28	duration T13 months
+A29	duration_confidence T13 neutral
+A30	class_confidence T13 high
+A31	class T13 MODAL
+R5	has_Argument Arg1:T12 Arg2:T13	
+R6	Tlink_SIMULTANEOUS Arg1:T6 Arg2:T12	
+R1	Tlink_SIMULTANEOUS Arg1:T1 Arg2:T8	
+T14	Event 309 318	palgavõlg
+A32	duration T14 days
+A33	duration_confidence T14 neutral
+A34	class_confidence T14 high
+A35	class T14 STATE
+R7	Tlink_SIMULTANEOUS Arg1:T4 Arg2:T14	
+T15	Event 113 119	teatas
+A36	duration T15 minutes
+A37	duration_confidence T15 neutral
+A38	class_confidence T15 high
+A39	class T15 REPORTING
+R8	Tlink_INCLUDES Arg1:T2 Arg2:T15	

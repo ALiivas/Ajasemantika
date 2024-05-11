@@ -1,0 +1,126 @@
+T1	Timex 63 69	Tänavu
+T2	Timex 345 355	sel aastal
+T3	Timex 371 387	tulevaks aastaks
+T4	Timex 518 527	sel suvel
+T5	Timex 653 662	sel suvel
+T6	Timex 706 717	mõneaastane
+T7	Timex 1318 1323	öösel
+T8	Timex 1587 1598	selle aasta
+T9	Timex 1709 1722	2006. aastani
+T10	Timex 1843 1849	aastas
+T11	Timex 2029 2035	aastas
+T12	Timex 2189 2199	sel aastal
+A1	type T1 DATE
+A2	type T2 DATE
+A3	type T3 DATE
+A4	type T4 DATE
+A5	type T5 DATE
+A6	type T6 DURATION
+A7	type T7 TIME
+A8	type T8 DATE
+A9	type T9 DATE
+A10	type T10 SET
+A11	type T11 SET
+A12	type T12 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='Tänavu' tid='t1' type='DATE' value='2004' temporal_function=True>
+#2	AnnotatorNotes T2	Original: <TIMEX text='sel aastal' tid='t2' type='DATE' value='2004' temporal_function=True>
+#3	AnnotatorNotes T3	Original: <TIMEX text='tulevaks aastaks' tid='t3' type='DATE' value='2005' temporal_function=True>
+#4	AnnotatorNotes T4	Original: <TIMEX text='sel suvel' tid='t4' type='DATE' value='2004-SU' temporal_function=True>
+#5	AnnotatorNotes T5	Original: <TIMEX text='sel suvel' tid='t5' type='DATE' value='2004-SU' temporal_function=True>
+#6	AnnotatorNotes T6	Original: <TIMEX text='mõneaastane' tid='t1_1' type='DURATION' value='PXY' temporal_function=True>
+#7	AnnotatorNotes T7	Original: <TIMEX text='öösel' tid='t6' type='TIME' value='TNI' temporal_function=True>
+#8	AnnotatorNotes T8	Original: <TIMEX text='selle aasta' tid='t7' type='DATE' value='2004' temporal_function=True>
+#9	AnnotatorNotes T9	Original: <TIMEX text='2006. aastani' tid='t8' type='DATE' value='2006' temporal_function=False comment="kuna ees on 'kuni', on võimalus lisada varjatud vahemik t0 kuni 2006 ...">
+#10	AnnotatorNotes T10	Original: <TIMEX text='aastas' tid='t1_2' type='SET' value='P1Y' temporal_function=True>
+#11	AnnotatorNotes T11	Original: <TIMEX text='aastas' tid='t1_3' type='SET' value='P1Y' temporal_function=True>
+#12	AnnotatorNotes T12	Original: <TIMEX text='sel aastal' tid='t9' type='DATE' value='2004' temporal_function=True>
+T13	Event 70 82	remonditakse
+A13	duration T13 months
+A14	duration_confidence T13 neutral
+A15	class_confidence T13 high
+A16	class T13 OCCURRENCE
+R1	Tlink_INCLUDES Arg1:T1 Arg2:T13	
+T14	Event 511 514	töö
+A17	duration T14 months
+A18	duration_confidence T14 neutral
+A19	class_confidence T14 high
+A20	class T14 OCCURRENCE
+R2	Tlink_INCLUDES Arg1:T4 Arg2:T14	
+T15	Event 388 392	jääb
+A21	duration T15 months
+A22	duration_confidence T15 neutral
+A23	class_confidence T15 high
+A24	class T15 STATE
+R3	Tlink_INCLUDES Arg1:T3 Arg2:T15	
+T16	Event 644 652	jätkuvad
+A25	duration T16 months
+A26	duration_confidence T16 neutral
+A27	class_confidence T16 high
+A28	class T16 ASPECTUAL
+T17	Event 663 667	tööd
+A29	duration T17 months
+A30	duration_confidence T17 neutral
+A31	class_confidence T17 high
+A32	class T17 OCCURRENCE
+R4	has_Argument Arg1:T16 Arg2:T17	
+R5	Tlink_INCLUDES Arg1:T5 Arg2:T16	
+T18	Event 718 722	paus
+A33	duration T18 years
+A34	duration_confidence T18 high
+A35	class_confidence T18 high
+A36	class T18 STATE
+R6	Tlink_SIMULTANEOUS Arg1:T6 Arg2:T18	
+T19	Event 339 344	peaks
+A37	duration T19 months
+A38	duration_confidence T19 neutral
+A39	class_confidence T19 high
+A40	class T19 MODAL
+T20	Event 362 367	saama
+A41	duration T20 months
+A42	duration_confidence T20 neutral
+A43	class_confidence T20 high
+A44	class T20 MODAL
+R7	has_Argument Arg1:T19 Arg2:T20	
+R8	Tlink_INCLUDES Arg1:T2 Arg2:T19	
+T21	Event 1599 1606	eelarve
+A45	duration T21 months
+A46	duration_confidence T21 high
+A47	class_confidence T21 high
+A48	class T21 STATE
+R9	Tlink_SIMULTANEOUS Arg1:T8 Arg2:T21	
+T22	Event 1308 1312	teha
+A49	duration T22 hours
+A50	duration_confidence T22 high
+A51	class_confidence T22 high
+A52	class T22 I_ACTION
+T23	Event 1298 1302	töid
+A53	duration T23 hours
+A54	duration_confidence T23 neutral
+A55	class_confidence T23 high
+A56	class T23 OCCURRENCE
+R10	has_Argument Arg1:T22 Arg2:T23	
+R11	Tlink_INCLUDES Arg1:T7 Arg2:T22	
+T24	Event 1733 1741	võimalik
+A57	duration T24 years
+A58	duration_confidence T24 high
+A59	class_confidence T24 high
+A60	class T24 STATE
+R12	Tlink_AFTER Arg1:T9 Arg2:T24	
+T25	Event 1810 1818	taotleda
+A61	duration T25 minutes
+A62	duration_confidence T25 neutral
+A63	class_confidence T25 high
+A64	class T25 OCCURRENCE
+R13	Tlink_INCLUDES Arg1:T10 Arg2:T25	
+T26	Event 2203 2211	kasutata
+A65	duration T26 months
+A66	duration_confidence T26 high
+A67	class_confidence T26 high
+A68	class T26 OCCURRENCE
+R14	Tlink_SIMULTANEOUS Arg1:T12 Arg2:T26	
+T27	Event 2004 2008	saab
+A69	duration T27 seconds
+A70	duration_confidence T27 neutral
+A71	class_confidence T27 high
+A72	class T27 OCCURRENCE
+R15	Tlink_INCLUDES Arg1:T11 Arg2:T27	

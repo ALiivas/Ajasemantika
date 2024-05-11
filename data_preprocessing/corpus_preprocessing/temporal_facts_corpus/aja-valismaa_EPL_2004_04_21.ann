@@ -1,0 +1,48 @@
+T1	Timex 980 984	nüüd
+T2	Timex 1077 1083	aastas
+T3	Timex 1153 1159	aastas
+T4	Timex 1813 1817	nüüd
+T5	Timex 1878 1883	Varem
+A1	type T1 DATE
+A2	type T2 SET
+A3	type T3 SET
+A4	type T4 DATE
+A5	type T5 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='nüüd' tid='t1' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#2	AnnotatorNotes T2	Original: <TIMEX text='aastas' tid='t1_1' type='SET' value='P1Y' temporal_function=True>
+#3	AnnotatorNotes T3	Original: <TIMEX text='aastas' tid='t1_2' type='SET' value='P1Y' temporal_function=True>
+#4	AnnotatorNotes T4	Original: <TIMEX text='nüüd' tid='t2' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#5	AnnotatorNotes T5	Original: <TIMEX text='Varem' tid='t1_3' type='DATE' value='PAST_REF' temporal_function=True anchor_time_id='t0'>
+T6	Event 1884 1891	tõsteti
+A6	duration T6 days
+A7	duration_confidence T6 neutral
+A8	class_confidence T6 high
+A9	class T6 OCCURRENCE
+R1	Tlink_INCLUDES Arg1:T5 Arg2:T6	
+T7	Event 985 991	hakkab
+A10	duration T7 instant
+A11	duration_confidence T7 high
+A12	class_confidence T7 high
+A13	class T7 ASPECTUAL
+T8	Event 1031 1038	teenima
+A14	duration T8 years
+A15	duration_confidence T8 neutral
+A16	class_confidence T8 neutral
+A17	class T8 OCCURRENCE
+R2	has_Argument Arg1:T7 Arg2:T8	
+R3	Tlink_SIMULTANEOUS Arg1:T1 Arg2:T7	
+R4	Tlink_IS_INCLUDED Arg1:T1 Arg2:T8	
+T9	Event 1110 1115	saaks
+A18	duration T9 months
+A19	duration_confidence T9 high
+A20	class_confidence T9 high
+A21	class T9 OCCURRENCE
+R5	Tlink_SIMULTANEOUS Arg1:T3 Arg2:T9	
+T10	Event 1810 1812	on
+A22	duration T10 years
+A23	duration_confidence T10 neutral
+A24	class_confidence T10 high
+A25	class T10 STATE
+R6	Tlink_IS_INCLUDED Arg1:T4 Arg2:T10	
+R7	Tlink_IS_INCLUDED Arg1:T2 Arg2:T8	
+R8	Tlink_AFTER Arg1:T2 Arg2:T7	

@@ -1,0 +1,75 @@
+T1	Timex 406 424	Viimastel aastatel
+T2	Timex 1262 1277	neljaks aastaks
+T3	Timex 3062 3084	järgmise aasta jooksul
+T4	Timex 3168 3185	selle aasta lõppu
+T5	Timex 3793 3802	homsetele
+T6	Timex 3883 3890	eilsete
+T7	Timex 3921 3928	homsete
+A1	type T1 DURATION
+A2	type T2 DURATION
+A3	type T3 DATE
+A4	type T4 DATE
+A5	type T5 DATE
+A6	type T6 DATE
+A7	type T7 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='Viimastel aastatel' tid='t1' type='DURATION' value='PXY' temporal_function=True begin_point={'tid': 't2', 'type': 'DATE', 'value': 'XXXX', 'temporal_function': True} end_point='t0'>
+#2	AnnotatorNotes T2	Original: <TIMEX text='neljaks aastaks' tid='t3' type='DURATION' value='P4Y' temporal_function=False>
+#3	AnnotatorNotes T3	Original: <TIMEX text='järgmise aasta jooksul' tid='t4' type='DATE' value='2004' temporal_function=True>
+#4	AnnotatorNotes T4	Original: <TIMEX text='selle aasta lõppu' tid='t5' type='DATE' value='2003' temporal_function=True mod='END'>
+#5	AnnotatorNotes T5	Original: <TIMEX text='homsetele' tid='t6' type='DATE' value='FUTURE_REF' temporal_function=True anchor_time_id='t0'>
+#6	AnnotatorNotes T6	Original: <TIMEX text='eilsete' tid='t7' type='DATE' value='PAST_REF' temporal_function=True anchor_time_id='t0'>
+#7	AnnotatorNotes T7	Original: <TIMEX text='homsete' tid='t8' type='DATE' value='FUTURE_REF' temporal_function=True anchor_time_id='t0'>
+T8	Event 425 433	kuhjunud
+A8	duration T8 years
+A9	duration_confidence T8 high
+A10	class_confidence T8 high
+A11	class T8 OCCURRENCE
+R1	Tlink_SIMULTANEOUS Arg1:T1 Arg2:T8	
+T9	Event 1211 1216	saaks
+A12	duration T9 years
+A13	duration_confidence T9 high
+A14	class_confidence T9 high
+A15	class T9 MODAL
+T10	Event 1252 1261	valitsuse
+A16	duration T10 years
+A17	duration_confidence T10 high
+A18	class_confidence T10 neutral
+A19	class T10 STATE
+R3	Tlink_SIMULTANEOUS Arg1:T2 Arg2:T9	
+T11	Event 3038 3049	esitamisest
+A20	duration T11 instant
+A21	duration_confidence T11 high
+A22	class_confidence T11 high
+A23	class T11 OCCURRENCE
+R4	Tlink_INCLUDES Arg1:T3 Arg2:T11	
+T12	Event 3096 3101	peaks
+A24	duration T12 months
+A25	duration_confidence T12 neutral
+A26	class_confidence T12 high
+A27	class T12 MODAL
+T13	Event 3111 3118	eelnema
+A28	duration T13 months
+A29	duration_confidence T13 neutral
+A30	class_confidence T13 neutral
+A31	class T13 OCCURRENCE
+R5	Tlink_AFTER Arg1:T4 Arg2:T12	
+R2	has_Argument Arg1:T9 Arg2:T10	
+R6	has_Argument Arg1:T12 Arg2:T13	
+T14	Event 3803 3814	vajadustele
+A32	duration T14 years
+A33	duration_confidence T14 neutral
+A34	class_confidence T14 high
+A35	class T14 STATE
+T15	Event 3891 3897	tõdede
+A36	duration T15 years
+A37	duration_confidence T15 neutral
+A38	class_confidence T15 high
+A39	class T15 STATE
+T16	Event 3929 3940	probleemide
+A40	duration T16 years
+A41	duration_confidence T16 neutral
+A42	class_confidence T16 high
+A43	class T16 STATE
+R7	Tlink_SIMULTANEOUS Arg1:T5 Arg2:T14	
+R8	Tlink_SIMULTANEOUS Arg1:T6 Arg2:T15	
+R9	Tlink_SIMULTANEOUS Arg1:T7 Arg2:T16	

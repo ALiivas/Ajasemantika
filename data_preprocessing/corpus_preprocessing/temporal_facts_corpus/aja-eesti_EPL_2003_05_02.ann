@@ -1,0 +1,80 @@
+T1	Timex 10 16	2. mai
+T2	Timex 27 36	Laupäeval
+T3	Timex 92 98	senise
+T4	Timex 1347 1353	hetkel
+T5	Timex 1466 1478	aasta pärast
+T6	Timex 1580 1602	järgneva aasta jooksul
+T7	Timex 2838 2846	10. mail
+T8	Timex 2853 2857	seni
+A1	type T1 DATE
+A2	type T2 DATE
+A3	type T3 DATE
+A4	type T4 DATE
+A5	type T5 DATE
+A6	type T6 DURATION
+A7	type T7 DATE
+A8	type T8 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='2. mai' tid='t1' type='DATE' value='2003-05-02' temporal_function=True>
+#2	AnnotatorNotes T2	Original: <TIMEX text='Laupäeval' tid='t2' type='DATE' value='2003-05-03' temporal_function=True>
+#3	AnnotatorNotes T3	Original: <TIMEX text='senise' tid='t1_7' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0' mod='ON_OR_BEFORE'>
+#4	AnnotatorNotes T4	Original: <TIMEX text='hetkel' tid='t3' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#5	AnnotatorNotes T5	Original: <TIMEX text='aasta pärast' tid='t4' type='DATE' value='2004' temporal_function=True comment='siin on võimalik ka täpsem semantika 2004-05'>
+#6	AnnotatorNotes T6	Original: <TIMEX text='järgneva aasta jooksul' tid='t5' type='DURATION' value='P1Y' temporal_function=True begin_point='t0' end_point='??'>
+#7	AnnotatorNotes T7	Original: <TIMEX text='10. mail' tid='t6' type='DATE' value='2003-05-10' temporal_function=True>
+#8	AnnotatorNotes T8	Original: <TIMEX text='seni' tid='t1_6' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0' mod='ON_OR_BEFORE'>
+T9	Event 61 69	kongress
+A9	duration T9 hours
+A10	duration_confidence T9 high
+A11	class_confidence T9 high
+A12	class T9 OCCURRENCE
+R1	Tlink_INCLUDES Arg1:T2 Arg2:T9	
+T10	Entity 99 103	nime
+R2	Tlink_SIMULTANEOUS Arg1:T3 Arg2:T10	
+T11	Event 1572 1579	suudame
+A13	duration T11 months
+A14	duration_confidence T11 high
+A15	class_confidence T11 high
+A16	class T11 I_STATE
+T12	Event 1603 1607	teha
+A17	duration T12 months
+A18	duration_confidence T12 high
+A19	class_confidence T12 high
+A20	class T12 I_ACTION
+R3	Tlink_SIMULTANEOUS Arg1:T6 Arg2:T11	
+R4	has_Argument Arg1:T11 Arg2:T12	
+T13	Event 2827 2837	suurkogule
+A21	duration T13 hours
+A22	duration_confidence T13 neutral
+A23	class_confidence T13 high
+A24	class T13 OCCURRENCE
+R5	Tlink_INCLUDES Arg1:T7 Arg2:T13	
+T14	Event 2891 2897	debatt
+A25	duration T14 months
+A26	duration_confidence T14 neutral
+A27	class_confidence T14 high
+A28	class T14 OCCURRENCE
+R6	Tlink_IS_INCLUDED Arg1:T8 Arg2:T14	
+T15	Event 1430 1435	võiks
+A29	duration T15 weeks
+A30	duration_confidence T15 low
+A31	class_confidence T15 high
+A32	class T15 MODAL
+T16	Event 1448 1455	kaaluda
+A33	duration T16 weeks
+A34	duration_confidence T16 low
+A35	class_confidence T16 high
+A36	class T16 OCCURRENCE
+R7	has_Argument Arg1:T15 Arg2:T16	
+R8	Tlink_SIMULTANEOUS Arg1:T5 Arg2:T15	
+T17	Event 1331 1334	pea
+A37	duration T17 weeks
+A38	duration_confidence T17 low
+A39	class_confidence T17 high
+A40	class T17 MODAL
+T18	Event 1354 1365	aktuaalseks
+A41	duration T18 weeks
+A42	duration_confidence T18 low
+A43	class_confidence T18 high
+A44	class T18 STATE
+R9	has_Argument Arg1:T17 Arg2:T18	
+R10	Tlink_IS_INCLUDED Arg1:T4 Arg2:T17	

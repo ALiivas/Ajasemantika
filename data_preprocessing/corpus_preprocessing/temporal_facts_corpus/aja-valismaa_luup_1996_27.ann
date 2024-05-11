@@ -1,0 +1,91 @@
+T1	Timex 13 19	praegu
+T2	Timex 50 67	1992. aasta suvel
+T3	Timex 435 444	mitu kuud
+T4	Timex 735 743	nüüdseks
+T5	Timex 1246 1263	mõni aasta tagasi
+T6	Timex 1297 1301	nüüd
+T7	Timex 1757 1763	ööpäev
+T8	Timex 2027 2034	1992.a.
+T9	Timex 2068 2075	1996.a.
+T10	Timex 3457 3464	hiljuti
+A1	type T1 DATE
+A2	type T2 DATE
+A3	type T3 DURATION
+A4	type T4 DATE
+A5	type T5 DATE
+A6	type T6 DATE
+A7	type T7 DURATION
+A8	type T8 DATE
+A9	type T9 DATE
+A10	type T10 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='praegu' tid='t1' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#2	AnnotatorNotes T2	Original: <TIMEX text='1992. aasta suvel' tid='t2' type='DATE' value='1992-SU' temporal_function=False>
+#3	AnnotatorNotes T3	Original: <TIMEX text='mitu kuud' tid='t1_2' type='DURATION' value='PXM' temporal_function=True>
+#4	AnnotatorNotes T4	Original: <TIMEX text='nüüdseks' tid='t4' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#5	AnnotatorNotes T5	Original: <TIMEX text='mõni aasta tagasi' tid='t5' type='DATE' value='PAST_REF' temporal_function=True anchor_time_id='t0'>
+#6	AnnotatorNotes T6	Original: <TIMEX text='nüüd' tid='t6' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#7	AnnotatorNotes T7	Original: <TIMEX text='ööpäev' tid='t1_3' type='DURATION' value='PT24H' temporal_function=True comment='alternatiivne value P1D'>
+#8	AnnotatorNotes T8	Original: <TIMEX text='1992.a.' tid='t7' type='DATE' value='1992' temporal_function=False>
+#9	AnnotatorNotes T9	Original: <TIMEX text='1996.a.' tid='t8' type='DATE' value='1996' temporal_function=False>
+#10	AnnotatorNotes T10	Original: <TIMEX text='hiljuti' tid='t9' type='DATE' value='PAST_REF' temporal_function=True anchor_time_id='t0'>
+T11	Event 8 12	näeb
+A11	duration T11 months
+A12	duration_confidence T11 high
+A13	class_confidence T11 low
+A14	class T11 OCCURRENCE
+R1	Tlink_IS_INCLUDED Arg1:T1 Arg2:T11	
+R2	Tlink_SIMULTANEOUS Arg1:T2 Arg2:T11	
+T12	Event 451 459	maksmata
+A15	duration T12 months
+A16	duration_confidence T12 high
+A17	class_confidence T12 high
+A18	class T12 OCCURRENCE
+R3	Tlink_INCLUDES Arg1:T3 Arg2:T12	
+T13	Event 753 761	lõppenud
+A19	duration T13 instant
+A20	duration_confidence T13 neutral
+A21	class_confidence T13 high
+A22	class T13 ASPECTUAL
+R4	Tlink_AFTER Arg1:T4 Arg2:T13	
+T14	Event 1290 1296	räägib
+A23	duration T14 years
+A24	duration_confidence T14 neutral
+A25	class_confidence T14 low
+A26	class T14 OCCURRENCE
+R5	Tlink_IS_INCLUDED Arg1:T6 Arg2:T14	
+T15	Event 1772 1786	mammutistungil
+A27	duration T15 hours
+A28	duration_confidence T15 high
+A29	class_confidence T15 high
+A30	class T15 OCCURRENCE
+R6	Tlink_SIMULTANEOUS Arg1:T7 Arg2:T15	
+T16	Event 2035 2042	tabanud
+A31	duration T16 instant
+A32	duration_confidence T16 neutral
+A33	class_confidence T16 high
+A34	class T16 OCCURRENCE
+R7	Tlink_INCLUDES Arg1:T8 Arg2:T16	
+T17	Event 2056 2058	on
+A35	duration T17 months
+A36	duration_confidence T17 neutral
+A37	class_confidence T17 high
+A38	class T17 STATE
+R8	Tlink_SIMULTANEOUS Arg1:T9 Arg2:T17	
+T18	Event 3447 3456	möödusime
+A39	duration T18 minutes
+A40	duration_confidence T18 high
+A41	class_confidence T18 high
+A42	class T18 OCCURRENCE
+R9	Tlink_INCLUDES Arg1:T10 Arg2:T18	
+T19	Event 1274 1284	venekeelne
+A43	duration T19 years
+A44	duration_confidence T19 neutral
+A45	class_confidence T19 neutral
+A46	class T19 STATE
+R10	Tlink_IS_INCLUDED Arg1:T5 Arg2:T19	
+T20	Event 721 731	Rahareform
+A47	duration T20 months
+A48	duration_confidence T20 low
+A49	class_confidence T20 high
+A50	class T20 OCCURRENCE
+R11	has_Argument Arg1:T13 Arg2:T20	

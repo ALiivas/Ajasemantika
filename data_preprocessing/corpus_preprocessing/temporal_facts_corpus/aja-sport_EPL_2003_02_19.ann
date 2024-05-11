@@ -1,0 +1,120 @@
+T1	Timex 204 220	järgmisel aastal
+T2	Timex 281 287	tänavu
+T3	Timex 335 343	tänasest
+T4	Timex 428 444	eelmisel nädalal
+T5	Timex 1264 1268	kuus
+T6	Timex 1390 1398	tänavust
+T7	Timex 1827 1833	Praegu
+T8	Timex 2045 2051	praegu
+T9	Timex 2151 2156	mullu
+T10	Timex 3105 3109	Nüüd
+T11	Timex 3398 3402	Nüüd
+T12	Timex 3522 3526	täna
+A1	type T1 DATE
+A2	type T2 DATE
+A3	type T3 DATE
+A4	type T4 DATE
+A5	type T5 SET
+A6	type T6 DATE
+A7	type T7 DATE
+A8	type T8 DATE
+A9	type T9 DATE
+A10	type T10 DATE
+A11	type T11 DATE
+A12	type T12 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='järgmisel aastal' tid='t1' type='DATE' value='2004' temporal_function=True>
+#2	AnnotatorNotes T2	Original: <TIMEX text='tänavu' tid='t2' type='DATE' value='2003' temporal_function=True>
+#3	AnnotatorNotes T3	Original: <TIMEX text='tänasest' tid='t3' type='DATE' value='2003-02-19' temporal_function=True>
+#4	AnnotatorNotes T4	Original: <TIMEX text='eelmisel nädalal' tid='t4' type='DATE' value='2003-W07' temporal_function=True>
+#5	AnnotatorNotes T5	Original: <TIMEX text='kuus' tid='t1_10' type='SET' value='P1M' temporal_function=True>
+#6	AnnotatorNotes T6	Original: <TIMEX text='tänavust' tid='t5' type='DATE' value='2003' temporal_function=True>
+#7	AnnotatorNotes T7	Original: <TIMEX text='Praegu' tid='t6' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#8	AnnotatorNotes T8	Original: <TIMEX text='praegu' tid='t7' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#9	AnnotatorNotes T9	Original: <TIMEX text='mullu' tid='t8' type='DATE' value='2002' temporal_function=True>
+#10	AnnotatorNotes T10	Original: <TIMEX text='Nüüd' tid='t9' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#11	AnnotatorNotes T11	Original: <TIMEX text='Nüüd' tid='t10' type='DATE' value='PRESENT_REF' temporal_function=True anchor_time_id='t0'>
+#12	AnnotatorNotes T12	Original: <TIMEX text='täna' tid='t11' type='DATE' value='2003-02-19' temporal_function=True>
+T13	Event 196 203	mängida
+A13	duration T13 hours
+A14	duration_confidence T13 neutral
+A15	class_confidence T13 high
+A16	class T13 I_ACTION
+T14	Event 221 237	Meistrite liigas
+A17	duration T14 weeks
+A18	duration_confidence T14 high
+A19	class_confidence T14 high
+A20	class T14 OCCURRENCE
+R1	has_Argument Arg1:T13 Arg2:T14	
+R2	Tlink_INCLUDES Arg1:T1 Arg2:T13	
+T15	Event 274 280	kuulub
+A21	duration T15 months
+A22	duration_confidence T15 high
+A23	class_confidence T15 high
+A24	class T15 STATE
+R3	Tlink_SIMULTANEOUS Arg1:T2 Arg2:T15	
+T16	Event 344 361	korduskohtumisest
+A25	duration T16 hours
+A26	duration_confidence T16 high
+A27	class_confidence T16 high
+A28	class T16 OCCURRENCE
+R4	Tlink_INCLUDES Arg1:T3 Arg2:T16	
+T17	Event 452 459	võideti
+A29	duration T17 hours
+A30	duration_confidence T17 neutral
+A31	class_confidence T17 high
+A32	class T17 OCCURRENCE
+R5	Tlink_INCLUDES Arg1:T4 Arg2:T17	
+T18	Event 1212 1218	maksab
+A33	duration T18 minutes
+A34	duration_confidence T18 neutral
+A35	class_confidence T18 high
+A36	class T18 OCCURRENCE
+R6	Tlink_INCLUDES Arg1:T5 Arg2:T18	
+T19	Event 1399 1406	hooaega
+A37	duration T19 months
+A38	duration_confidence T19 high
+A39	class_confidence T19 high
+A40	class T19 OCCURRENCE
+R7	Tlink_SIMULTANEOUS Arg1:T6 Arg2:T19	
+T20	Event 1834 1840	näitab
+A41	duration T20 hours
+A42	duration_confidence T20 neutral
+A43	class_confidence T20 high
+A44	class T20 I_ACTION
+T21	Event 1851 1860	euromänge
+A45	duration T21 hours
+A46	duration_confidence T21 neutral
+A47	class_confidence T21 high
+A48	class T21 OCCURRENCE
+R8	has_Argument Arg1:T20 Arg2:T21	
+R9	Tlink_IS_INCLUDED Arg1:T7 Arg2:T20	
+T22	Event 2057 2068	otsustamata
+A49	duration T22 months
+A50	duration_confidence T22 neutral
+A51	class_confidence T22 high
+A52	class T22 STATE
+R10	Tlink_IS_INCLUDED Arg1:T8 Arg2:T22	
+T23	Event 2157 2162	arvas
+A53	duration T23 minutes
+A54	duration_confidence T23 neutral
+A55	class_confidence T23 high
+A56	class T23 OCCURRENCE
+R11	Tlink_INCLUDES Arg1:T9 Arg2:T23	
+T24	Event 3110 3112;3127 3132	on parem
+A57	duration T24 days
+A58	duration_confidence T24 neutral
+A59	class_confidence T24 high
+A60	class T24 STATE
+R12	Tlink_IS_INCLUDED Arg1:T10 Arg2:T24	
+T25	Event 3495 3507	Otseülekanne
+A61	duration T25 minutes
+A62	duration_confidence T25 neutral
+A63	class_confidence T25 high
+A64	class T25 OCCURRENCE
+R13	Tlink_INCLUDES Arg1:T12 Arg2:T25	
+T26	Event 3415 3417	on
+A65	duration T26 hours
+A66	duration_confidence T26 neutral
+A67	class_confidence T26 high
+A68	class T26 STATE
+R14	Tlink_SIMULTANEOUS Arg1:T11 Arg2:T26	

@@ -1,0 +1,71 @@
+T1	Timex 52 59	reedeks
+T2	Timex 592 603	varasemates
+T3	Timex 875 888	ligi 20 tundi
+T4	Timex 893 905	isegi rohkem
+T5	Timex 2267 2278	Kolmapäeval
+T6	Timex 2376 2415	mitte hiljem kui eelseisval kolmapäeval
+T7	Timex 2525 2527	8-
+T8	Timex 2527 2535	10 päeva
+A1	type T1 DATE
+A2	type T2 DATE
+A3	type T3 DURATION
+A4	type T4 DURATION
+A5	type T5 DATE
+A6	type T6 DATE
+A7	type T7 DURATION
+A8	type T8 DURATION
+#1	AnnotatorNotes T1	Original: <TIMEX text='reedeks' tid='t1' type='DATE' value='2000-08-18' temporal_function=True>
+#2	AnnotatorNotes T2	Original: <TIMEX text='varasemates' tid='t1_2' type='DATE' value='PAST_REF' temporal_function=True anchor_time_id='t0'>
+#3	AnnotatorNotes T3	Original: <TIMEX text='ligi 20 tundi' tid='t2' type='DURATION' value='PT20H' temporal_function=True mod='APPROX'>
+#4	AnnotatorNotes T4	Original: <TIMEX text='isegi rohkem' tid='t1_1' type='DURATION' value='PT20H' temporal_function=True anchor_time_id='t2' mod='MORE_THAN'>
+#5	AnnotatorNotes T5	Original: <TIMEX text='Kolmapäeval' tid='t3' type='DATE' value='2000-08-16' temporal_function=True>
+#6	AnnotatorNotes T6	Original: <TIMEX text='mitte hiljem kui eelseisval kolmapäeval' tid='t4' type='DATE' value='2000-08-23' temporal_function=True mod='ON_OR_BEFORE'>
+#7	AnnotatorNotes T7	Original: <TIMEX text='8-' tid='t5' type='DURATION' value='P8D' temporal_function=False>
+#8	AnnotatorNotes T8	Original: <TIMEX text='10 päeva' tid='t6' type='DURATION' value='P10D' temporal_function=False>
+T9	Event 65 75	otsustanud
+A9	duration T9 instant
+A10	duration_confidence T9 high
+A11	class_confidence T9 high
+A12	class T9 I_ACTION
+R1	Tlink_AFTER Arg1:T1 Arg2:T9	
+T10	Entity 835 844	materjali
+R2	Tlink_SIMULTANEOUS Arg1:T3 Arg2:T10	
+R3	Tlink_SIMULTANEOUS Arg1:T4 Arg2:T10	
+T11	Event 2291 2300	vestelnud
+A13	duration T11 minutes
+A14	duration_confidence T11 neutral
+A15	class_confidence T11 high
+A16	class T11 OCCURRENCE
+R4	Tlink_INCLUDES Arg1:T5 Arg2:T11	
+T12	Event 2507 2518	operatsioon
+A17	duration T12 days
+A18	duration_confidence T12 high
+A19	class_confidence T12 high
+A20	class T12 OCCURRENCE
+R5	Tlink_SIMULTANEOUS Arg1:T7 Arg2:T12	
+R6	Tlink_SIMULTANEOUS Arg1:T8 Arg2:T12	
+T13	Event 604 612	saadetes
+A21	duration T13 minutes
+A22	duration_confidence T13 neutral
+A23	class_confidence T13 high
+A24	class T13 OCCURRENCE
+T14	Event 618 629	kirjutistes
+A25	duration T14 minutes
+A26	duration_confidence T14 neutral
+A27	class_confidence T14 high
+A28	class T14 OCCURRENCE
+R7	Tlink_INCLUDES Arg1:T2 Arg2:T13	
+R8	Tlink_INCLUDES Arg1:T2 Arg2:T14	
+T15	Event 2371 2375	teha
+A29	duration T15 hours
+A30	duration_confidence T15 neutral
+A31	class_confidence T15 high
+A32	class T15 I_ACTION
+T16	Event 2349 2363	operatsiooniga
+A33	duration T16 days
+A34	duration_confidence T16 high
+A35	class_confidence T16 high
+A36	class T16 OCCURRENCE
+R9	has_Argument Arg1:T15 Arg2:T16	
+R10	Tlink_INCLUDES Arg1:T6 Arg2:T15	
+R11	Tlink_IS_INCLUDED Arg1:T6 Arg2:T16	

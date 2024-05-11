@@ -1,0 +1,100 @@
+T1	Timex 10 32	varasematest aastatest
+T2	Timex 77 91	tänavu kevadel
+T3	Timex 261 267	tänavu
+T4	Timex 369 385	Möödunud nädalal
+T5	Timex 539 555	Mullu samal ajal
+T6	Timex 669 690	tänavu märtsi alguses
+T7	Timex 695 705	veebruaris
+T8	Timex 708 715	nädalas
+T9	Timex 774 779	Mullu
+T10	Timex 805 809	12.-
+T11	Timex 809 824	18. veebruarini
+T12	Timex 831 845	nädala jooksul
+A1	type T1 DATE
+A2	type T2 DATE
+A3	type T3 DATE
+A4	type T4 DATE
+A5	type T5 DATE
+A6	type T6 DATE
+A7	type T7 DATE
+A8	type T8 SET
+A9	type T9 DATE
+A10	type T10 DATE
+A11	type T11 DATE
+A12	type T12 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='varasematest aastatest' tid='t1' type='DATE' value='PAST_REF' temporal_function=True comment='saaks ka täpsemalt'>
+#2	AnnotatorNotes T2	Original: <TIMEX text='tänavu kevadel' tid='t2' type='DATE' value='2002-SP' temporal_function=True>
+#3	AnnotatorNotes T3	Original: <TIMEX text='tänavu' tid='t3' type='DATE' value='2002' temporal_function=True>
+#4	AnnotatorNotes T4	Original: <TIMEX text='Möödunud nädalal' tid='t4' type='DATE' value='2002-W12' temporal_function=True>
+#5	AnnotatorNotes T5	Original: <TIMEX text='Mullu samal ajal' tid='t5' type='DATE' value='2001-W12' temporal_function=True anchor_time_id='t4' comment='! anchorTimeID peaks viitama ka t0-ile !'>
+#6	AnnotatorNotes T6	Original: <TIMEX text='tänavu märtsi alguses' tid='t7' type='DATE' value='2002-03' temporal_function=True mod='START'>
+#7	AnnotatorNotes T7	Original: <TIMEX text='veebruaris' tid='t8' type='DATE' value='2002-02' temporal_function=True>
+#8	AnnotatorNotes T8	Original: <TIMEX text='nädalas' tid='t1_1' type='SET' value='P1W' temporal_function=True comment='problemaatiline'>
+#9	AnnotatorNotes T9	Original: <TIMEX text='Mullu' tid='t9' type='DATE' value='2001' temporal_function=True>
+#10	AnnotatorNotes T10	Original: <TIMEX text='12.-' tid='t10' type='DATE' value='2002-02-12' temporal_function=True part_of_interval={'tid': 't12', 'type': 'DURATION', 'value': 'PXXD', 'temporal_function': True, 'begin_point': 't10', 'end_point': 't11'}>
+#11	AnnotatorNotes T11	Original: <TIMEX text='18. veebruarini' tid='t11' type='DATE' value='2002-02-18' temporal_function=True part_of_interval={'tid': 't12', 'type': 'DURATION', 'value': 'PXXD', 'temporal_function': True, 'begin_point': 't10', 'end_point': 't11'}>
+#12	AnnotatorNotes T12	Original: <TIMEX text='nädala jooksul' tid='t13' type='DATE' value='2001-W07' temporal_function=True comment='eelneva ajavahemiku teisendamine nädalaks'>
+T13	Event 36 50	registreerinud
+A13	duration T13 seconds
+A14	duration_confidence T13 neutral
+A15	class_confidence T13 neutral
+A16	class T13 I_ACTION
+T14	Event 111 123	haigestumist
+A17	duration T14 hours
+A18	duration_confidence T14 neutral
+A19	class_confidence T14 high
+A20	class T14 OCCURRENCE
+R1	Tlink_INCLUDES Arg1:T2 Arg2:T13	
+R2	has_Argument Arg1:T13 Arg2:T14	
+T15	Event 268 277	avastanud
+A21	duration T15 instant
+A22	duration_confidence T15 high
+A23	class_confidence T15 neutral
+A24	class T15 OCCURRENCE
+R3	Tlink_INCLUDES Arg1:T3 Arg2:T15	
+T16	Event 386 391	põdes
+A25	duration T16 days
+A26	duration_confidence T16 high
+A27	class_confidence T16 high
+A28	class T16 STATE
+R4	Tlink_SIMULTANEOUS Arg1:T4 Arg2:T16	
+T17	Event 556 560;589 596	olid tõbised
+A29	duration T17 days
+A30	duration_confidence T17 high
+A31	class_confidence T17 high
+A32	class T17 STATE
+R5	Tlink_SIMULTANEOUS Arg1:T5 Arg2:T17	
+T18	Event 623 635	haigestumist
+A33	duration T18 hours
+A34	duration_confidence T18 neutral
+A35	class_confidence T18 high
+A36	class T18 OCCURRENCE
+R6	Tlink_INCLUDES Arg1:T6 Arg2:T18	
+R7	Tlink_INCLUDES Arg1:T7 Arg2:T18	
+T19	Event 716 727	haigestunud
+A37	duration T19 hours
+A38	duration_confidence T19 neutral
+A39	class_confidence T19 high
+A40	class T19 OCCURRENCE
+R8	Tlink_INCLUDES Arg1:T8 Arg2:T19	
+T20	Event 846 859	registreeriti
+A41	duration T20 seconds
+A42	duration_confidence T20 neutral
+A43	class_confidence T20 high
+A44	class T20 I_ACTION
+T21	Event 898 908	haigusjuhu
+A45	duration T21 days
+A46	duration_confidence T21 high
+A47	class_confidence T21 high
+A48	class T21 OCCURRENCE
+R9	has_Argument Arg1:T20 Arg2:T21	
+R10	Tlink_INCLUDES Arg1:T12 Arg2:T20	
+T22	Event 780 785	tabas
+A49	duration T22 days
+A50	duration_confidence T22 high
+A51	class_confidence T22 high
+A52	class T22 OCCURRENCE
+R11	Tlink_INCLUDES Arg1:T9 Arg2:T22	
+R12	Tlink_IS_INCLUDED Arg1:T10 Arg2:T22	
+R13	Tlink_IS_INCLUDED Arg1:T11 Arg2:T22	
+R14	Tlink_BEFORE Arg1:T1 Arg2:T13	

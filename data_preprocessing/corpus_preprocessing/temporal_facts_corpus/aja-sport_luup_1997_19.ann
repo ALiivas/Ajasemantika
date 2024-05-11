@@ -1,0 +1,108 @@
+T1	Timex 0 11	Juulis 1939
+T2	Timex 141 151	30. juunil
+T3	Timex 1669 1683	Umbes minutise
+T4	Timex 2222 2239	5. juuli hommikul
+T5	Timex 2541 2555	mitmepäevaseks
+T6	Timex 3557 3568	1939. aasta
+T7	Timex 3631 3650	Nädalapäevad hiljem
+T8	Timex 3793 3801	mõni kuu
+T9	Timex 3902 3920	1939. aasta talvel
+T10	Timex 3934 3947	selleks ajaks
+T11	Timex 4136 4147	1939. aasta
+A1	type T1 DATE
+A2	type T2 DATE
+A3	type T3 DURATION
+A4	type T4 TIME
+A5	type T5 DURATION
+A6	type T6 DATE
+A7	type T7 DATE
+A8	type T8 DURATION
+A9	type T9 DATE
+A10	type T10 DATE
+A11	type T11 DATE
+#1	AnnotatorNotes T1	Original: <TIMEX text='Juulis 1939' tid='t1' type='DATE' value='1939-07' temporal_function=False>
+#2	AnnotatorNotes T2	Original: <TIMEX text='30. juunil' tid='t2' type='DATE' value='1939-06-30' temporal_function=True anchor_time_id='t1'>
+#3	AnnotatorNotes T3	Original: <TIMEX text='Umbes minutise' tid='t3' type='DURATION' value='PT1M' temporal_function=False mod='APPROX'>
+#4	AnnotatorNotes T4	Original: <TIMEX text='5. juuli hommikul' tid='t4' type='TIME' value='1939-07-05TMO' temporal_function=True anchor_time_id='t2'>
+#5	AnnotatorNotes T5	Original: <TIMEX text='mitmepäevaseks' tid='t1_1' type='DURATION' value='PXD' temporal_function=True>
+#6	AnnotatorNotes T6	Original: <TIMEX text='1939. aasta' tid='t5' type='DATE' value='1939' temporal_function=False>
+#7	AnnotatorNotes T7	Original: <TIMEX text='Nädalapäevad hiljem' tid='t6' type='DATE' value='1939-WXX' temporal_function=True anchor_time_id='t5' comment='ankurdamine problemaatiline, tuleks ankurdada kahe ajaväljend külge'>
+#8	AnnotatorNotes T8	Original: <TIMEX text='mõni kuu' tid='t1_2' type='DURATION' value='PXM' temporal_function=True>
+#9	AnnotatorNotes T9	Original: <TIMEX text='1939. aasta talvel' tid='t7' type='DATE' value='1939-WI' temporal_function=False>
+#10	AnnotatorNotes T10	Original: <TIMEX text='selleks ajaks' tid='t1_4' type='DATE' value='1939-WI' temporal_function=False anchor_time_id='t7'>
+#11	AnnotatorNotes T11	Original: <TIMEX text='1939. aasta' tid='t8' type='DATE' value='1939' temporal_function=False>
+T12	Event 12 18	võitis
+A12	duration T12 seconds
+A13	duration_confidence T12 neutral
+A14	class_confidence T12 high
+A15	class T12 OCCURRENCE
+R1	Tlink_INCLUDES Arg1:T1 Arg2:T12	
+T13	Event 1684 1691	vaikuse
+A16	duration T13 seconds
+A17	duration_confidence T13 high
+A18	class_confidence T13 high
+A19	class T13 STATE
+R2	Tlink_SIMULTANEOUS Arg1:T3 Arg2:T13	
+T14	Event 2556 2575	bussiekskursiooniks
+A20	duration T14 days
+A21	duration_confidence T14 high
+A22	class_confidence T14 high
+A23	class T14 OCCURRENCE
+R3	Tlink_SIMULTANEOUS Arg1:T5 Arg2:T14	
+T15	Entity 3569 3577	ajalehte
+R4	Tlink_INCLUDES Arg1:T6 Arg2:T15	
+T16	Event 3651 3656	ootas
+A24	duration T16 minutes
+A25	duration_confidence T16 neutral
+A26	class_confidence T16 high
+A27	class T16 STATE
+R5	Tlink_INCLUDES Arg1:T7 Arg2:T16	
+T17	Event 3765 3771	lõpuni
+A28	duration T17 hours
+A29	duration_confidence T17 neutral
+A30	class_confidence T17 high
+A31	class T17 OCCURRENCE
+R6	Tlink_BEFORE Arg1:T8 Arg2:T17	
+T18	Event 3876 3884	valitses
+A32	duration T18 months
+A33	duration_confidence T18 high
+A34	class_confidence T18 high
+A35	class T18 I_STATE
+T19	Event 3861 3869	meeleolu
+A36	duration T19 months
+A37	duration_confidence T19 high
+A38	class_confidence T19 high
+A39	class T19 STATE
+R7	has_Argument Arg1:T18 Arg2:T19	
+R8	Tlink_SIMULTANEOUS Arg1:T9 Arg2:T18	
+T20	Event 3986 3994	kaotanud
+A40	duration T20 hours
+A41	duration_confidence T20 neutral
+A42	class_confidence T20 high
+A43	class T20 OCCURRENCE
+R9	Tlink_AFTER Arg1:T10 Arg2:T20	
+T21	Event 4156 4170	tõrjelahingute
+A44	duration T21 hours
+A45	duration_confidence T21 neutral
+A46	class_confidence T21 high
+A47	class T21 OCCURRENCE
+R10	Tlink_INCLUDES Arg1:T11 Arg2:T21	
+T22	Event 2204 2210	jõudis
+A48	duration T22 minutes
+A49	duration_confidence T22 neutral
+A50	class_confidence T22 high
+A51	class T22 OCCURRENCE
+R11	Tlink_INCLUDES Arg1:T4 Arg2:T22	
+T23	Event 152 158	alanud
+A52	duration T23 seconds
+A53	duration_confidence T23 neutral
+A54	class_confidence T23 high
+A55	class T23 ASPECTUAL
+T24	Event 159 173	jõukatsumisest
+A56	duration T24 days
+A57	duration_confidence T24 neutral
+A58	class_confidence T24 high
+A59	class T24 OCCURRENCE
+R12	has_Argument Arg1:T23 Arg2:T24	
+R13	Tlink_INCLUDES Arg1:T2 Arg2:T23	
+R14	Tlink_IS_INCLUDED Arg1:T2 Arg2:T24	

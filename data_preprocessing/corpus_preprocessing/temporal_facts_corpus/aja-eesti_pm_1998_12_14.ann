@@ -1,0 +1,14 @@
+T1	Timex 596 613	nõukogude aastail
+T2	Timex 897 910	48-minutilise
+A1	type T1 DURATION
+A2	type T2 DURATION
+#1	AnnotatorNotes T1	Original: <TIMEX text='nõukogude aastail' tid='t1' type='DURATION' value='PXY' temporal_function=True>
+#2	AnnotatorNotes T2	Original: <TIMEX text='48-minutilise' tid='t2' type='DURATION' value='PT48M' temporal_function=False>
+T3	Event 575 581	tehtud
+A3	duration T3 weeks
+A4	duration_confidence T3 neutral
+A5	class_confidence T3 high
+A6	class T3 OCCURRENCE
+R1	Tlink_INCLUDES Arg1:T1 Arg2:T3	
+T4	Entity 911 916	filmi
+R2	Tlink_SIMULTANEOUS Arg1:T2 Arg2:T4	
