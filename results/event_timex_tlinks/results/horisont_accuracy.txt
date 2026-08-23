@@ -1,0 +1,8 @@
+EstBERT, MLP, main_last, all accuracy: 0.009615384615384616
+EstBERT, SVC, mean_add, agg accuracy: 0.8653846153846154
+EstRoBERTa, MLP, main_add, all accuracy: 0.5288461538461539
+EstRoBERTa, MLP, main_penult, all accuracy: 0.5096153846153846
+EstRoBERTa, MLP, main_concat, agg accuracy: 0.8653846153846154
+EstRoBERTa, SVC  , main_add, agg accuracy: 0.9326923076923077
+EstRoBERTa, MLP, mean_penult, agg accuracy: 0.9711538461538461
+EstRoBERTa, XGB, mean_penult, agg accuracy: 0.9519230769230769

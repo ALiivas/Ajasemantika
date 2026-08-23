@@ -1,0 +1,12 @@
+EstBERT, RF, main_last, all accuracy: 0.12
+EstBERT, RF, mean_last, all accuracy: 0.12
+EstBERT, XGB, main_concat, agg_3 accuracy: 0.52
+EstBERT, XGB, mean_concat, agg_3 accuracy: 0.52
+EstBERT, XGB, main_concat, agg_2 accuracy: 0.61
+EstBERT, XGB, mean_concat, agg_2 accuracy: 0.61
+EstRoBERTa, RF, main_last, all accuracy: 0.28
+EstRoBERTa, RF, mean_last, all accuracy: 0.28
+EstRoBERTa, SVC, main_penult, agg_3 accuracy: 0.66
+EstRoBERTa, SVC, mean_penult, agg_3 accuracy: 0.66
+EstRoBERTa, SVC, main_concat, agg_2 accuracy: 0.66
+EstRoBERTa, SVC, mean_concat, agg_2 accuracy: 0.66

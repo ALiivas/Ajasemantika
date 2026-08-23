@@ -1,0 +1,12 @@
+EstBERT, RF, main_last, all accuracy: 0.07777777777777778
+EstBERT, RF, mean_last, all accuracy: 0.07777777777777778
+EstBERT, XGB, main_concat, agg_3 accuracy: 0.4444444444444444
+EstBERT, XGB, mean_concat, agg_3 accuracy: 0.4444444444444444
+EstBERT, XGB, main_concat, agg_2 accuracy: 0.7333333333333333
+EstBERT, XGB, mean_concat, agg_2 accuracy: 0.7333333333333333
+EstRoBERTa, RF, main_last, all accuracy: 0.1
+EstRoBERTa, RF, mean_last, all accuracy: 0.1
+EstRoBERTa, SVC, main_penult, agg_3 accuracy: 0.5666666666666667
+EstRoBERTa, SVC, mean_penult, agg_3 accuracy: 0.5666666666666667
+EstRoBERTa, SVC, main_concat, agg_2 accuracy: 0.7222222222222222
+EstRoBERTa, SVC, mean_concat, agg_2 accuracy: 0.7222222222222222
