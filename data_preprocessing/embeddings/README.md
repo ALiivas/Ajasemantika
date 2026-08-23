@@ -1,0 +1,1 @@
+Eesti TimeML korpuse ja ajafaktide korpuse treening-, arendus- ja testhulkade tekstidele EstBERTi ja Est-RoBERTa sõnede vektoresituste leidmine.

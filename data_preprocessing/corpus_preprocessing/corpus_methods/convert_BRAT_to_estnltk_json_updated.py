@@ -443,9 +443,47 @@ def import_from_brat_folder( folder ):
                 event_class = event['class']
                 gold_word_events_w_classes_layer.add_annotation([iob_word[0].base_span], nertag=iob_word['nertag']+'_'+event_class)
             else:
-                gold_word_events_w_classes_layer.add_annotation([iob_word[0].base_span], nertag='O')
-    
+                gold_word_events_w_classes_layer.add_annotation([iob_word[0].base_span], nertag='O')    
         text_obj.add_layer( gold_word_events_w_classes_layer )
+        #
+        # Add event layer with IOB-annotations and aggregated event classes (keep MODAL; don't keep MODAL)
+        #       
+        def create_gold_word_events_w_agg_classes(agg_mapping, result_layer_name):
+            gold_word_events_w_agg_classes_layer = Layer(name="gold_word_events_w_agg_classes", text_object=text_obj, attributes=['nertag'],
+                                             enveloping='words')   
+            for i in range(len(text_obj.gold_word_events)):
+                iob_word = text_obj.gold_word_events[i]
+                event = None
+                if iob_word['nertag'] == 'B-EVENT' or iob_word['nertag'] == 'I-EVENT':
+                    for j in range(len(text_obj.events)):
+                        if iob_word[0] in text_obj.events[j]:
+                            event = text_obj.events[j]
+                            break
+                if event:
+                    event_class = event['class']
+                    gold_word_events_w_agg_classes_layer.add_annotation([iob_word[0].base_span], nertag=iob_word['nertag']+'_'+agg_mapping[event_class])
+                else:
+                    gold_word_events_w_agg_classes_layer.add_annotation([iob_word[0].base_span], nertag='O')
+            return gold_word_events_w_agg_classes_layer
+        
+        agg_mapping1 = {'REPORTING': 'ARG_CLASS',
+                        'PERCEPTION': 'ARG_CLASS',
+                        'ASPECTUAL': 'ARG_CLASS',
+                        'I_ACTION': 'ARG_CLASS',
+                        'I_STATE': 'ARG_CLASS',
+                        'STATE': 'STATE',
+                        'MODAL': 'MODAL',
+                        'OCCURRENCE': 'OCCURRENCE'}
+        text_obj.add_layer( create_gold_word_events_w_agg_classes(agg_mapping1, "gold_word_events_w_agg_classes") )
+        agg_mapping2 = {'REPORTING': 'ARG_CLASS',
+                       'PERCEPTION': 'ARG_CLASS',
+                       'ASPECTUAL': 'ARG_CLASS',
+                       'I_ACTION': 'ARG_CLASS',
+                       'I_STATE': 'ARG_CLASS',
+                       'STATE': 'STATE',
+                       'MODAL': 'ARG_CLASS',
+                       'OCCURRENCE': 'OCCURRENCE'}
+        text_obj.add_layer( create_gold_word_events_w_agg_classes(agg_mapping2, "gold_word_events_w_agg_classes_no_modal") )
         #
         #  Add tlink relation annotations
         #

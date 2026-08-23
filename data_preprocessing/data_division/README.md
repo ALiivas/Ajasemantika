@@ -1,0 +1,1 @@
+Eesti TimeML korpuse ja ajafaktide korpuse tekstide jagamine treening-, arendus- ja testhulkadeks.

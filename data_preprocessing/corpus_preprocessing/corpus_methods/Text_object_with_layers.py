@@ -143,6 +143,60 @@ def create_gold_word_events_with_classes_layer(text_obj):
     return gold_word_events_w_classes
 
 
+# -- method for creating gold_word_events layer with IOB-annotations and aggregated event classes (keeping class MODAL)
+def create_gold_word_events_with_agg_classes_layer(text_obj, event_layer_name, class_attr_name):
+    agg_mapping = {'REPORTING': 'ARG_CLASS',
+               'PERCEPTION': 'ARG_CLASS',
+               'ASPECTUAL': 'ARG_CLASS',
+               'I_ACTION': 'ARG_CLASS',
+               'I_STATE': 'ARG_CLASS',
+               'STATE': 'STATE',
+               'MODAL': 'MODAL',
+               'OCCURRENCE': 'OCCURRENCE'}
+    
+    gold_word_events_w_agg_classes = estnltk.Layer(name="gold_word_events_w_agg_classes", text_object=text_obj, attributes=['nertag'],
+                                     enveloping='words')   
+    for i in range(len(text_obj.gold_word_events)):
+        iob_word = text_obj.gold_word_events[i]
+        event = None
+        if iob_word['nertag'] == 'B-EVENT' or iob_word['nertag'] == 'I-EVENT':
+            event = text_obj[event_layer_name].get(iob_word)
+        if event:
+            event_class = event[class_attr_name]
+            gold_word_events_w_agg_classes.add_annotation([iob_word[0].base_span], nertag=iob_word['nertag']+'_'+agg_mapping[event_class][0]) # NB! TimeML korpuse puhul nõuab agg_mapping[event_class][0]
+        else:
+            gold_word_events_w_agg_classes.add_annotation([iob_word[0].base_span], nertag='O')
+    
+    return gold_word_events_w_agg_classes
+
+
+# -- method for creating gold_word_events layer with IOB-annotations and aggregated event classes (not keeping class MODAL)
+def create_gold_word_events_with_agg_classes_no_modal_layer(text_obj, event_layer_name, class_attr_name):
+    agg_mapping = {'REPORTING': 'ARG_CLASS',
+               'PERCEPTION': 'ARG_CLASS',
+               'ASPECTUAL': 'ARG_CLASS',
+               'I_ACTION': 'ARG_CLASS',
+               'I_STATE': 'ARG_CLASS',
+               'STATE': 'STATE',
+               'MODAL': 'ARG_CLASS',
+               'OCCURRENCE': 'OCCURRENCE'}
+    
+    gold_word_events_w_agg_classes_no_modal = estnltk.Layer(name="gold_word_events_w_agg_classes_no_modal", text_object=text_obj, attributes=['nertag'],
+                                     enveloping='words')   
+    for i in range(len(text_obj.gold_word_events)):
+        iob_word = text_obj.gold_word_events[i]
+        event = None
+        if iob_word['nertag'] == 'B-EVENT' or iob_word['nertag'] == 'I-EVENT':
+            event = text_obj[event_layer_name].get(iob_word)
+        if event:
+            event_class = event[class_attr_name]
+            gold_word_events_w_agg_classes_no_modal.add_annotation([iob_word[0].base_span], nertag=iob_word['nertag']+'_'+agg_mapping[event_class][0])
+        else:
+            gold_word_events_w_agg_classes_no_modal.add_annotation([iob_word[0].base_span], nertag='O')
+    
+    return gold_word_events_w_agg_classes_no_modal
+
+
 # -- method for creating layer of gold event phrases
 def create_gold_event_phrases(text_obj):
     gold_event_phrases = estnltk.Layer(name='gold_event_phrases',
@@ -330,6 +384,8 @@ def create_Text_object_with_layers(filename, articlesDCT, baseAnnotations, event
     text_obj.add_layer( timex_layer )
     text_obj.add_layer( create_gold_word_events_layer(text_obj) )
     text_obj.add_layer( create_gold_word_events_with_classes_layer(text_obj) )
+    text_obj.add_layer( create_gold_word_events_with_agg_classes_layer(text_obj, 'gold_events', 'event_class') )
+    text_obj.add_layer( create_gold_word_events_with_agg_classes_no_modal_layer(text_obj, 'gold_events', 'event_class') )
     text_obj.add_layer( create_gold_event_phrases(text_obj) )
     text_obj.add_layer( create_gold_timex_phrases(text_obj) )
     text_obj.add_layer( create_event_timex_rel_layer(text_obj, event_timex_rels) )
