@@ -1,0 +1,1 @@
+Sündmuste tuvastamise, sündmuste ajaliste kestustüüpide määramise, sündmuse-dokumendi-loomisaja ja sündmuse-ajaväljendi vaheliste ajaseoste määramise masinõppeeksperimentide skriptid. Masinõppeeksperimentide skriptide juurde on lisatud shelli skriptid, mida HPC-s mudelite treenimiseks kasutati.
