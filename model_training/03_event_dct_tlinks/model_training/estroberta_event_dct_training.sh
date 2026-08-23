@@ -1,6 +1,6 @@
 #!/bin/bash
-# The name of the job is EstBERT_Model_training
-#SBATCH -J EstBERT_Model_training
+# The name of the job is Est-RoBERTa_model_training
+#SBATCH -J Est-RoBERTa_model_training
 # Format of the output filename: slurm-jobname.jobid.out
 #SBATCH --output=slurm-%x.%j.out
 # The job requires 1 compute node
@@ -9,7 +9,7 @@
 #SBATCH --ntasks-per-node=1
 # The maximum walltime of the job is 1 hours 0 minutes
 #SBATCH -t 01:00:00
-#SBATCH --mem=8G
+#SBATCH --mem=16G
 # If you keep the next two lines, you will get an e-mail notification
 # whenever something happens to your job (it starts running, completes or fails)
 #SBATCH --mail-type=ALL
@@ -22,6 +22,6 @@
 # Load Python
 module load any/python/3.8.3-conda
 # Activate environment
-conda activate #masters_thesis
+conda activate masters_thesis
 echo $(python3.10 --version)
-python3.10 #./EstBERT_events_training_param_tuning_save_best.py
+python3.10 ./event_dct_tlinks.py

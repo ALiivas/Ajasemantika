@@ -1,6 +1,6 @@
 #!/bin/bash
-# The name of the job is Est-RoBERTa_model_training
-#SBATCH -J Est-RoBERTa_model_training
+# The name of the job is EstBERT_model_training
+#SBATCH -J EstBERT_model_training
 # Format of the output filename: slurm-jobname.jobid.out
 #SBATCH --output=slurm-%x.%j.out
 # The job requires 1 compute node
@@ -22,6 +22,6 @@
 # Load Python
 module load any/python/3.8.3-conda
 # Activate environment
-conda activate #masters_thesis
+conda activate masters_thesis
 echo $(python3.10 --version)
-python3.10 #./EstRoBERTa_ev_dct_tlinks_agg.py
+python3.10 ./event_dct_tlinks.py

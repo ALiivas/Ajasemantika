@@ -1,8 +1,8 @@
 import os
 import json
-
 import estnltk
 from estnltk.converters import json_to_text, text_to_json
+
 from estnltk_neural.taggers.embeddings.bert.bert_tokens_to_words_rewriter import BertTokens2WordsRewriter
 
 import torch
@@ -16,7 +16,7 @@ def save_predictions(target_path, corpus_texts, sentence_starts, tokens_w_spans,
         for i, token_list in enumerate(tokens_w_spans):
             for j, token in enumerate(token_list):
                 if token[0] is None and token[1] is None:
-                    # Skip special tokens (e.g. [CLS], [SEP])
+                    # Skip special tokens (e.g. <s>, </s>)
                     continue
                 try:
                     pred_label = pred_labels[i][j]
@@ -27,44 +27,36 @@ def save_predictions(target_path, corpus_texts, sentence_starts, tokens_w_spans,
                     print(i)
                     print(j)
                     break
-                try:    
-                    token_start = sentence_starts[i]+token[0]
-                except:
-                    print(i)
-                    print(sentence_starts)
-                    print(len(tokens_w_spans))
-                    print(tokens_w_spans)
-                    print(sentence_starts[i])
-                    print("Token: ", token)
                     
+                token_start = sentence_starts[i]+token[0]
                 token_end = sentence_starts[i]+token[1]
                 attributes = {'token': token[2], 'nertag': pred_label}
                 event_pred_layer.add_annotation((token_start, token_end), **attributes)  
         return event_pred_layer
     
     def rewriter_decorator(text_obj, sharing_words, shared_bert_tokens):
-        return {'estbert_tokens': [t.text for t in shared_bert_tokens],
+        return {'estroberta_tokens': [t.text for t in shared_bert_tokens],
             'nertag': [n.nertag for n in shared_bert_tokens][0][0]}
     
-    rewriter = BertTokens2WordsRewriter('estbert_tokens', 
+    rewriter = BertTokens2WordsRewriter('estroberta_tokens', 
                                     input_words_layer = 'words', 
-                                    output_attributes = ('estbert_tokens', 'nertag'), 
-                                    output_layer = 'estbert_tokens_of_words',
+                                    output_attributes = ('estroberta_tokens', 'nertag'), 
+                                    output_layer = 'estroberta_tokens_of_words',
                                     enveloping = False,
                                     decorator = rewriter_decorator)
     
     for idx, text in enumerate(corpus_texts):
         fname = text.meta['filename']
-        text.add_layer(create_bert_token_layer(text, sentence_starts[idx], tokens_w_spans[fname], pred_tag_values[fname], 'estbert_tokens'))
+        text.add_layer(create_bert_token_layer(text, sentence_starts[idx], tokens_w_spans[fname], pred_tag_values[fname], 'estroberta_tokens'))
         print(fname)
         rewriter.tag(text)
-        save_path = target_path.strip('/')+"_pred/"
+        save_path = target_path
         filename = save_path + fname + '_pred.json'
         text_to_json(text, file=filename)
 
-
 def predict_on_corpus(corpus_path, dtype, model, tokenizer, layer, event_classes):
     target_path = corpus_path
+
     corpus_texts = []
 
     for filename in os.listdir(target_path):
@@ -72,13 +64,13 @@ def predict_on_corpus(corpus_path, dtype, model, tokenizer, layer, event_classes
         corpus_texts.append(text_obj)
 
     # -- Method for splitting corpus data into sentences with corresponding labels and IDs
+    # -- Also, information about filenames will be kept
     def split_data(text_objects, layer):
         filenames = []
         sentence_starts = []
         sentences = []
         tokens = []
-        labels = []
-    
+        labels = []    
         for text in text_objects:
             sent_starts = []
             for sentence in text.sentences:
@@ -94,17 +86,16 @@ def predict_on_corpus(corpus_path, dtype, model, tokenizer, layer, event_classes
                 sentences.append(sentence.enclosing_text)
                 tokens.append(sent)
                 labels.append(sent_labels)
-                
             sentence_starts.append(sent_starts)
-    
-        assert len(sentences) == len(tokens) == len(labels), "Different number of sentences and corresponding labels"    
+            
+        assert len(sentences) == len(tokens) == len(labels), "Different number of sentences and corresponding labels"       
         return filenames, sentence_starts, sentences, tokens, labels
 
     filenames, sentence_starts, sentences, tokens, labels = split_data(corpus_texts, layer)
-    
-    label_list = list(set([l for label in labels for l in label]))
-    label_list.append('PAD')
 
+    label_list = list(set([l for label in labels for l in label]))
+    label_list.append('<pad>')
+    
     # based on HuggingFace tutorial (https://huggingface.co/docs/transformers/tasks/token_classification)
     def tokenize_and_align_labels(texts, true_labels):
         tokenized_inputs = tokenizer.batch_encode_plus(texts, return_tensors="pt", padding=True, is_split_into_words=True)
@@ -141,7 +132,6 @@ def predict_on_corpus(corpus_path, dtype, model, tokenizer, layer, event_classes
         predictions = torch.argmax(logits, dim=2)
         
         for i, pred in enumerate(predictions):
-            #pred_tokens = tokenized_inputs.tokens(batch_index=i)
             # leiame iga tokeni algus- ja lõpuindeksi algses lauses
             tokens_w_spans = []
             include_spanless = True
@@ -161,7 +151,7 @@ def predict_on_corpus(corpus_path, dtype, model, tokenizer, layer, event_classes
             all_preds.append(final_predictions)
             cleaned_aligned_labels.append(final_labels)
             assert len(final_predictions) == len(final_labels), "Eri pikkusega tõelised ja ennustatud labelid"
-
+    
     #viime kokku ennustused ja failinimed  
     file_tokens_w_spans = {}
     file_pred_tag_values = {}
@@ -176,16 +166,18 @@ def predict_on_corpus(corpus_path, dtype, model, tokenizer, layer, event_classes
     nervaluate = Evaluator(cleaned_aligned_labels, all_preds, tags=event_classes, loader='list')
     results, results_by_tag, result_indices, result_indices_by_tag = nervaluate.evaluate()
     
-    # -- Saving evaluation results to JSON
-    #with open(f'masters_thesis/estbert_events_param_tuning_pred_tempf_{dtype}.json', 'w') as f: 
-    #    json.dump([results, results_by_tag, result_indices, result_indices_by_tag], f)
-    
     # -- creating layer of predictions and saving
     save_predictions(target_path, corpus_texts, sentence_starts, file_tokens_w_spans, file_pred_tag_values)
-        
-    
-tokenizer = AutoTokenizer.from_pretrained('./masters_thesis/estbert_events_param_tuning_best/best')
-model = AutoModelForTokenClassification.from_pretrained('./masters_thesis/estbert_events_param_tuning_best/best')
-event_classes = ['EVENT']
 
-predict_on_corpus('masters_thesis/timeml_final_test/', 'news', model, tokenizer, 'gold_word_events', event_classes)
+
+#########################################
+# IMPLEMENTATION EXAMPLE
+#
+# load tokenizer and model
+tokenizer = AutoTokenizer.from_pretrained('./masters_thesis/est-roberta_events_param_tuning_best/best')
+model = AutoModelForTokenClassification.from_pretrained('./masters_thesis/est-roberta_events_param_tuning_best/best')
+# specify event tags
+event_classes = ['EVENT']
+#
+# predict on corpus
+predict_on_corpus('masters_thesis/timeml_final_test_pred/', 'news', model, tokenizer, 'gold_word_events', event_classes)
